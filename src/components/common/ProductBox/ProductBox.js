@@ -55,7 +55,7 @@ const ProductBox = ({ name, price, promo, stars, imageSource, oldPrice }) => (
         <del className={styles.expiredContainer}>
           {oldPrice ? <span className={styles.expiredPrice}>$ {oldPrice}</span> : null}
         </del>
-        <Button noHover variant='small'>
+        <Button className={styles.Button} variant='small' noHover>
           $ {price}
         </Button>
       </div>
