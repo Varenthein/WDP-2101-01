@@ -87,4 +87,14 @@
       }
     }
   }
+  
+  .favorite{
+        background-color: $primary;
+        color: red;
+    }
+    
+    .exchange{
+        background-color: $primary;
+        color: green;
+    }
 }

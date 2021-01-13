@@ -18,6 +18,8 @@ const initialState = {
       newFurniture: true,
       imageSource:
         'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=2250&q=80',
+      isFavorite: false,
+      isExchange: false,
     },
     {
       id: 'aenean-ru-bristique-2',
@@ -29,6 +31,8 @@ const initialState = {
       newFurniture: true,
       imageSource:
         'https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2250&q=80',
+      isFavorite: true,
+      isExchange: false,
     },
     {
       id: 'aenean-ru-bristique-3',
@@ -40,6 +44,8 @@ const initialState = {
       newFurniture: true,
       imageSource:
         'https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=933&q=80',
+      isFavorite: true,
+      isExchange: true,
     },
     {
       id: 'aenean-ru-bristique-4',
@@ -52,6 +58,8 @@ const initialState = {
       newFurniture: true,
       imageSource:
         'https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1301&q=80',
+      isFavorite: false,
+      isExchange: true,
     },
     {
       id: 'aenean-ru-bristique-5',
