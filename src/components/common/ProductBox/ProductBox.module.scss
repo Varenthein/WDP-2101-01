@@ -8,9 +8,12 @@
   .photo {
     position: relative;
     padding: 80% 10px 0 10px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    background: {
+      color: #f4f5f7;
+      size: contain;
+      position: center;
+      repeat: no-repeat;
+    }
     overflow: hidden;
     align-items: flex-end;
 
@@ -28,6 +31,7 @@
     .buttons {
       display: flex;
       justify-content: space-between;
+      opacity: 0;
     }
   }
 
@@ -85,6 +89,16 @@
       .expiredPrice {
         color: grey;
       }
+    }
+  }
+
+  &:hover{
+    .buttons{
+      opacity:1;
+    }
+
+    .Button{
+      background-color: $primary;
     }
   }
 }
