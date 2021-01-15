@@ -53,16 +53,12 @@ const ProductBox = ({
     <div className={styles.line} />
     <div className={styles.actions}>
       <div className={styles.outlines}>
-        <Button
-          variant='outline'
-          className={isFavorite === true ? styles.favorite : ' '}
-        >
+        <Button variant='outline'>
           <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
+          {/* className={isFavorite === true ? styles.favorite : 'nonclass'}
+          className={isExchange === true ? styles.exchange : 'nonclass'} */}
         </Button>
-        <Button
-          variant='outline'
-          className={isExchange === true ? styles.exchange : ' '}
-        >
+        <Button variant='outline'>
           <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
         </Button>
       </div>
