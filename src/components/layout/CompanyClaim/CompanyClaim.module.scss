@@ -15,7 +15,6 @@
   .phoneNumber {
     @include mobile {
       position: absolute;
-      // margin-left: 1rem;
       top: 95px;
       left: 50%;
       width: 100%;
@@ -54,7 +53,6 @@
 
     @include mobile-small {
       width: 90%;
-      // height: auto;
     }
   }
 
