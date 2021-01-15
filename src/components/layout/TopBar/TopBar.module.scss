@@ -1,4 +1,5 @@
 @import "../../../styles/settings.scss";
+@import "../../../styles/mixins.scss";
 
 .root {
   background-color: $header-topbar-bg;
@@ -24,19 +25,40 @@
     }
   }
 
-  .topOptions ul li {
-    margin-right: 1.5rem;
+  .topOptions {
+    @include mobile {
+      padding-right: 0;
+      flex-grow: 2;
+    }
 
-    .icon {
-      margin-left: 5px;
+    & ul li {
+      margin-right: 10px;
+
+      .icon {
+        margin-left: 5px;
+      }
     }
   }
 
   .topMenu ul li {
     margin-left: 1.5rem;
 
+    @include mobile-small {
+      margin-left: 1rem;
+    }
+
     .icon {
       margin-right: 5px;
+
+      @include mobile {
+        margin: 0;
+      }
+    }
+
+    .text {
+      @include mobile {
+        display: none;
+      }
     }
   }
 }

@@ -1,19 +1,40 @@
 @import "../../../styles/settings.scss";
+@import "../../../styles/mixins.scss";
 
 .root {
   background-color: $header-bg;
 
   :global(.container) > :global(.row) {
     height: 145px;
+    @include mobile {
+      position: relative;
+      display: flex;
+    }
   }
 
   .phoneNumber {
+    @include mobile {
+      position: absolute;
+      top: 95px;
+      left: 50%;
+      width: 100%;
+      transform: translateX(-50%);
+    }
     p {
       margin: 0;
       font-size: 17px;
       line-height: 42px;
       color: $header-phone;
       font-weight: 500;
+      @include mobile {
+        font-size: 14px;
+        text-align: right;
+      }
+      @include mobile-small {
+        text-align: right;
+        margin-right: 2.5rem;
+        font-size: 17px;
+      }
 
       .icon {
         font-size: 32px;
@@ -25,11 +46,28 @@
     }
   }
 
+  .logo {
+    @include mobile {
+      transform: translateY(-20px);
+    }
+
+    @include mobile-small {
+      width: 90%;
+    }
+  }
+
   .cart {
+    @include mobile {
+      top: -20px;
+      right: 40px;
+    }
     .cartBox {
       display: inline-block;
       position: relative;
       color: $cart-text;
+      @include tablet {
+        margin-right: 10px;
+      }
 
       .cartIcon {
         background-color: $header-icon;
