@@ -53,12 +53,16 @@ const ProductBox = ({
     <div className={styles.line} />
     <div className={styles.actions}>
       <div className={styles.outlines}>
-        <Button variant='outline'>
+        <Button
+          variant='outline'
+          className={isFavorite === true ? styles.favorite : 'nonclass'}
+        >
           <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
-          {/* className={isFavorite === true ? styles.favorite : 'nonclass'}
-          className={isExchange === true ? styles.exchange : 'nonclass'} */}
         </Button>
-        <Button variant='outline'>
+        <Button
+          variant='outline'
+          className={isExchange === true ? styles.exchange : 'nonclass'}
+        >
           <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
         </Button>
       </div>
@@ -66,7 +70,7 @@ const ProductBox = ({
         <del className={styles.expiredContainer}>
           {oldPrice ? <span className={styles.expiredPrice}>$ {oldPrice}</span> : null}
         </del>
-        <Button noHover variant='small'>
+        <Button className={styles.Button} variant='small' noHover>
           $ {price}
         </Button>
       </div>

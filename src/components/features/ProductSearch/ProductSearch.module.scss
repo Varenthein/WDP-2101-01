@@ -4,7 +4,7 @@
   border: 1px solid $form-border-color;
   display: inline-flex;
   height: 45px;
-  color: $text-color;
+  color: $text-primary-dark;
 
   .category {
     border-right: 1px solid $form-border-color;
@@ -14,7 +14,7 @@
     
     // Animation of Hover
     &:hover{
-        background-color: $primary;
+        background-color: $orange-main;
     }
     
     &::before{
@@ -37,7 +37,7 @@
     
 
     .icon:first-child {
-      color: $primary;
+      color: $form-icon-color;
       position: absolute;
       left: 10px;
       z-index: 0;
@@ -52,7 +52,7 @@
     select {
       -webkit-appearance: none;
       border: 0;
-      background-color: transparent;
+      background-color: $form-select-background;
       padding: 5px 30px 5px 35px;
       position: relative;
       z-index: 1;
@@ -65,7 +65,7 @@
       
         &:focus,&:hover{
           outline: none; 
-          color: $primary;
+          color: $orange-main;
       }
       
       
@@ -84,13 +84,13 @@
       outline: none;
 
       &::placeholder {
-        color: $text-color;
+        color: $text-primary-dark;
       }
     }
 
     button {
       border: 0;
-      background-color: transparent;
+      background-color: $form-select-background;
       outline: none;
     }
   }
