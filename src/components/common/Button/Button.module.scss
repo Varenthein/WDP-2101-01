@@ -52,4 +52,11 @@
     background-color: #2a2a2a;
     color: #ffffff;
   }
+
+  &:hover {
+    transform: translateX(20%);
+    background-color: $primary;
+    color: $text-color;
+    transition: $transition-time linear;
+  }
 }
