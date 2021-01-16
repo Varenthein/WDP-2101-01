@@ -91,6 +91,16 @@
       }
     }
   }
+  
+  .favorite{
+        background-color: $orange-main;
+        color: $select-hearth;
+    }
+    
+    .exchange{
+        background-color: $orange-main;
+        color: $select-exchange;
+    }
 
   &:hover {
     .buttons {

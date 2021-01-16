@@ -11,7 +11,16 @@ import {
 import { faStar as farStar, faHeart } from '@fortawesome/free-regular-svg-icons';
 import Button from '../Button/Button';
 
-const ProductBox = ({ name, price, promo, stars, imageSource, oldPrice }) => (
+const ProductBox = ({
+  name,
+  price,
+  promo,
+  stars,
+  imageSource,
+  oldPrice,
+  isExchange,
+  isFavorite,
+}) => (
   <div className={styles.root}>
     <div
       className={styles.photo}
@@ -23,7 +32,7 @@ const ProductBox = ({ name, price, promo, stars, imageSource, oldPrice }) => (
       <div className={styles.buttons}>
         <Button variant='small'>Quick View</Button>
         <Button variant='small'>
-          <FontAwesomeIcon icon={faShoppingBasket}></FontAwesomeIcon> ADD TO CART
+          <FontAwesomeIcon icon={faShoppingBasket} /> ADD TO CART
         </Button>
       </div>
     </div>
@@ -41,13 +50,19 @@ const ProductBox = ({ name, price, promo, stars, imageSource, oldPrice }) => (
         ))}
       </div>
     </div>
-    <div className={styles.line}></div>
+    <div className={styles.line} />
     <div className={styles.actions}>
       <div className={styles.outlines}>
-        <Button variant='outline'>
+        <Button
+          variant='outline'
+          className={isFavorite === true ? styles.favorite : 'nonclass'}
+        >
           <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
         </Button>
-        <Button variant='outline'>
+        <Button
+          variant='outline'
+          className={isExchange === true ? styles.exchange : 'nonclass'}
+        >
           <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
         </Button>
       </div>
@@ -71,6 +86,8 @@ ProductBox.propTypes = {
   promo: PropTypes.string,
   stars: PropTypes.number,
   imageSource: PropTypes.string,
+  isExchange: PropTypes.bool,
+  isFavorite: PropTypes.bool,
 };
 
 export default ProductBox;
