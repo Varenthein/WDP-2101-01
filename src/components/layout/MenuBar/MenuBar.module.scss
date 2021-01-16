@@ -48,7 +48,7 @@
 
     .menuCheckbox:checked + .menuButton .menuIcon {
       & {
-        background-color: transparent;
+        background-color: $transparent;
       }
     }
 
@@ -70,7 +70,7 @@
       display: none;
       @include mobile {
         display: block;
-        background-color: $orange-main;
+        background-color: $menu-mobile-background;
         width: 3rem;
         height: 3rem;
         margin-right: 2rem;
@@ -92,7 +92,7 @@
       &::after {
         width: 2rem;
         height: 2px;
-        background-color: #fff;
+        background-color: $menu-mobile-bars;
         display: inline-block;
       }
 
@@ -123,7 +123,7 @@
         opacity: 0;
         flex-direction: column;
         position: absolute;
-        background-color: #fff;
+        background-color: $menu-background;
         width: 70vw;
         top: 6rem;
         right: 4rem;
