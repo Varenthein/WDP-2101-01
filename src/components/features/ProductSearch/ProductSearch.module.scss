@@ -1,40 +1,51 @@
 @import "../../../styles/settings.scss";
+@import "./../../../styles/mixins.scss";
 
 .root {
   border: 1px solid $form-border-color;
   display: inline-flex;
   height: 45px;
   color: $text-primary-dark;
+  @include mobile {
+    flex-direction: column;
+    height: auto;
+    & > * {
+      padding: 0.5rem;
+    }
+  }
 
   .category {
     border-right: 1px solid $form-border-color;
     display: flex;
     align-items: center;
     position: relative;
-    
-    // Animation of Hover
-    &:hover{
-        background-color: $orange-main;
+    @include mobile {
+      border: none;
+      border-bottom: 1px solid $form-border-color;
     }
-    
-    &::before{
-    content: "";
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 0%;
-    background: #363636;
-    z-index: 0;
-    transition: 0.8s;
-    
-    bottom: 0;
-    border-radius: 70% 0% 0 0;
-  }
-  
-  &:hover::before{
+
+    // Animation of Hover
+    &:hover {
+      background-color: $orange-main;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 0%;
+      background: #363636;
+      z-index: 0;
+      transition: 0.8s;
+
+      bottom: 0;
+      border-radius: 70% 0% 0 0;
+    }
+
+    &:hover::before {
       height: 100%;
-  }
-    
+    }
 
     .icon:first-child {
       color: $form-icon-color;
@@ -57,18 +68,17 @@
       position: relative;
       z-index: 1;
       font-size: 0.8rem;
-      
+
       //Transition
       transition: 0.8s;
       position: relative;
       overflow: hidden;
-      
-        &:focus,&:hover{
-          outline: none; 
-          color: $orange-main;
+
+      &:focus,
+      &:hover {
+        outline: none;
+        color: $orange-main;
       }
-      
-      
     }
   }
 
