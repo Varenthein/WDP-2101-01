@@ -4,16 +4,23 @@ import PropTypes from 'prop-types';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 
-const MainLayout = ({ children }) => (
-  <div>
-    <Header />
-    {children}
-    <Footer />
-  </div>
-);
+class MainLayout extends React.Component {
+  static propTypes = {
+    children: PropTypes.node,
+  };
 
-MainLayout.propTypes = {
-  children: PropTypes.node,
-};
+  render() {
+    const { children } = this.props;
+    return (
+      <div>
+        <Header />
+        {children}
+        <Footer />
+      </div>
+    );
+  }
+}
+
+
 
 export default MainLayout;
