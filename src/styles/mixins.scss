@@ -1,3 +1,9 @@
+@mixin mobile-fold {
+  @media (max-width: 319px) and (min-height: 415px) {
+    @content;
+  }
+}
+
 @mixin mobile-small {
   @media (max-width: 360px) and (min-height: 415px) {
     @content;
