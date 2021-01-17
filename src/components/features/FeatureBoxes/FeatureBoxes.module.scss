@@ -1,5 +1,33 @@
 @import "../../../styles/settings.scss";
+@import "./../../../styles/mixins.scss";
 
 .root {
   padding: 5rem 0;
+  width: 100vw;
+
+  :global(.container) {
+    width: 100%;
+  }
+
+  :global(.row) {
+    @include tablet {
+      width: 100%;
+      margin: 0;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile {
+      width: 100%;
+      margin: 0;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    :global(.col):nth-child(n + 3) {
+      @include mobile {
+        margin-top: 2rem;
+      }
+    }
+  }
 }

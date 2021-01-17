@@ -1,9 +1,13 @@
 @import "../../../styles/settings.scss";
-
+@import "./../../../styles/mixins.scss";
 .root {
   border: 1px solid $featureBox-border;
   text-align: center;
   margin-top: 40px;
+
+  @include mobile {
+    height: 9rem;
+  }
 
   .iconWrapper {
     height: 60px;
@@ -51,6 +55,16 @@
     margin-top: -0.5rem;
     letter-spacing: 1px;
     font-weight: 300;
+
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      height: 60%;
+      & * {
+        font-size: 1rem;
+      }
+    }
 
     h5 {
       font-weight: 600;
