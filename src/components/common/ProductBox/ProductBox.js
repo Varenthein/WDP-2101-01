@@ -10,7 +10,6 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { faStar as farStar, faHeart } from '@fortawesome/free-regular-svg-icons';
 import Button from '../Button/Button';
-import { addToCompare } from '../../../redux/compareRedux';
 
 const ProductBox = ({
   name,
@@ -56,7 +55,7 @@ const ProductBox = ({
         <Button variant='outline'>
           <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
         </Button>
-        <Button variant='outline' onClick={() => addToCompare}>
+        <Button onClick={() => addToCompare()} variant='outline'>
           <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
         </Button>
       </div>
@@ -81,8 +80,7 @@ ProductBox.propTypes = {
   stars: PropTypes.number,
   imageSource: PropTypes.string,
   addToCompare: PropTypes.func,
+  compare: PropTypes.array,
 };
-
-console.log(addToCompare);
 
 export default ProductBox;
