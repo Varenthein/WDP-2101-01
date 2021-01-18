@@ -92,6 +92,12 @@
       padding-left: 10px;
       font-size: 14px;
       outline: none;
+      @include mobile {
+        width: 170px;
+      }
+      @include mobile-small {
+        width: 160px;
+      }
 
       &::placeholder {
         color: $text-primary-dark;
