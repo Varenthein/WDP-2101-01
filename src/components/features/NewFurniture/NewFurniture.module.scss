@@ -1,12 +1,43 @@
 @import "../../../styles/settings.scss";
+@import "./../../../styles/mixins.scss";
 
 .root {
+  @include tablet {
+    :global(.row):not(:first-child) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    :global([class="col-3"]) {
+      max-width: 100%;
+    }
+  }
+
+  @include mobile {
+    :global(.row):not(:first-child) {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+    :global([class="col-3"]) {
+      max-width: 100%;
+    }
+  }
+
   .panelBar {
     margin-bottom: 30px;
     position: relative;
 
     :global(.row) > * {
       border-bottom: 4px solid $new-feature-border;
+    }
+
+    @include mobile {
+      :global(.row) {
+        display: grid;
+        grid-template-columns: 1fr;
+        height: 100px;
+      }
     }
 
     .heading {
@@ -48,6 +79,9 @@
             text-decoration: none;
             font-size: 18px;
             display: block;
+            @include mobile-small {
+              font-size: 16px;
+            }
 
             &.active,
             &:hover {
