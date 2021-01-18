@@ -296,8 +296,6 @@ const initialState = {
       newFurniture: true,
       isFavorite: false,
       isExchange: false,
-      isFavorite: false,
-      isExchange: false,
       imageSource:
         'https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2251&q=80',
     },
