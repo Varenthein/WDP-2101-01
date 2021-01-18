@@ -9,7 +9,7 @@ const createActionName = name => `app/${reducerName}/${name}`;
 const ADD_TO_COMPARE = createActionName('ADD_TO_COMPARE');
 
 /* action creators */
-export const addProduct = payload => ({ payload, type: ADD_TO_COMPARE });
+export const addToCompare = payload => ({ payload, type: ADD_TO_COMPARE });
 
 /* reducer */
 export default function reducer(statePart = [], action = {}) {
@@ -17,7 +17,7 @@ export default function reducer(statePart = [], action = {}) {
     case ADD_TO_COMPARE: {
       return {
         ...statePart,
-        products: [...statePart.products, action.payload],
+        products: [...statePart, { ...action.payload, id: action.payload.jd }],
       };
     }
     default:
