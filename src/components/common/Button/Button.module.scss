@@ -4,23 +4,23 @@
 // }
 
 .main {
-  background-color: #2a2a2a;
-  color: #ffffff;
+  background-color: $btn-dark-background;
+  color: $btn-dark-text;
   font-size: 16px;
   line-height: 24px;
   font-weight: 600;
   padding: 10px 30px;
 
   &:not(.noHover):hover {
-    color: #ffffff !important;
-    background-color: $primary;
+    color: $btn-dark-text !important;
+    background-color: $btn-dark-background-hover;
     text-decoration: none;
   }
 
   &:hover {
     transform: translateX(20%);
-    background-color: $primary;
-    color: $text-color;
+    background-color: $orange-main;
+    color: $white;
     transition: $transition-time linear;
   }
 }
@@ -34,8 +34,8 @@
 
   &:hover {
     transform: translateY(20%);
-    background-color: $primary;
-    color: $text-color;
+    background-color: $dark-value-3;
+    color: $white;
     transition: $transition-time ease-in-out;
   }
 }
@@ -43,20 +43,20 @@
 .outline {
   display: inline-block;
   padding: 5px 10px;
-  border: 1px solid #2a2a2a;
-  color: #2a2a2a;
+  border: 1px solid $btn-light-border;
+  color: $btn-light-text;
   font-size: 13px;
   line-height: 22px;
 
   &:not(.noHover):hover {
-    background-color: #2a2a2a;
-    color: #ffffff;
+    background-color: $btn-light-background-hover;
+    color: $btn-light-text-hover;
   }
 
   &:hover {
     transform: translateX(20%);
-    background-color: $primary;
-    color: $text-color;
+    background-color: $dark-value-3;
+    color: $white;
     transition: $transition-time linear;
   }
 }

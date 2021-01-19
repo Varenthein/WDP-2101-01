@@ -1,19 +1,50 @@
 @import "../../../styles/settings.scss";
+@import "./../../../styles/mixins.scss";
 
 .root {
+  @include tablet {
+    :global(.row):not(:first-child) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    :global([class="col-3"]) {
+      max-width: 100%;
+    }
+  }
+
+  @include mobile {
+    :global(.row):not(:first-child) {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+    :global([class="col-3"]) {
+      max-width: 100%;
+    }
+  }
+
   .panelBar {
     margin-bottom: 30px;
     position: relative;
 
     :global(.row) > * {
-      border-bottom: 4px solid #e2e2e2;
+      border-bottom: 4px solid $new-feature-border;
+    }
+
+    @include mobile {
+      :global(.row) {
+        display: grid;
+        grid-template-columns: 1fr;
+        height: 100px;
+      }
     }
 
     .heading {
       position: relative;
 
       h3 {
-        color: $primary;
+        color: $new-feature-heading-text;
         text-transform: uppercase;
         font-size: 20px;
         line-height: 38px;
@@ -27,7 +58,7 @@
         bottom: -4px;
         left: 0;
         width: 45px;
-        border-bottom: 4px solid $primary;
+        border-bottom: 4px solid $new-feature-heading-border;
       }
     }
 
@@ -43,11 +74,14 @@
           font-weight: 600;
 
           a {
-            color: rgb(42, 42, 42);
+            color: $menu-text;
             position: relative;
             text-decoration: none;
             font-size: 18px;
             display: block;
+            @include mobile-small {
+              font-size: 16px;
+            }
 
             &.active,
             &:hover {
@@ -57,7 +91,7 @@
                 bottom: -4px;
                 left: 0;
                 width: 100%;
-                border-bottom: 4px solid $primary;
+                border-bottom: 4px solid $menu-border-hover;
               }
             }
           }
@@ -74,7 +108,7 @@
         margin: 0;
         padding: 0 0 0 1rem;
         list-style: none;
-        background-color: #ffffff;
+        background-color: $dots-background-hover;
         transform: translateY(15px);
 
         li {
@@ -86,12 +120,12 @@
             width: 13px;
             height: 13px;
             border-radius: 6px;
-            background-color: #e1e1e1;
+            background-color: $dot-background;
             font-size: 0;
 
             &.active,
             &:hover {
-              background-color: $primary;
+              background-color: $dot-background-hover;
             }
           }
         }
