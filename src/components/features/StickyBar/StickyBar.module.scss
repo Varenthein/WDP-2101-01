@@ -1,0 +1,11 @@
+@import "../../../styles/settings.scss";
+
+.component {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 120px;
+  background-color: $dark-value-1;
+  display: flex;
+  justify-content: center;
+}
