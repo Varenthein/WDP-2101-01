@@ -12,7 +12,7 @@ const ADD_WINDOW_WIDTH = createActionName('ADD_WINDOW_WIDTH');
 export const addWindowWidth = payload => ({ payload, type: ADD_WINDOW_WIDTH });
 
 /* reducer */
-export default function reducer(statePart = [], action = {}) {
+export default function reducer(statePart = '', action = {}) {
   switch (action.type) {
     case ADD_WINDOW_WIDTH: {
       let screenSize = '';
