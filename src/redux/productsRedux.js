@@ -29,12 +29,3 @@ export default function reducer(statePart = [], action = {}) {
       return statePart;
   }
 }
-
-// ...statePart,
-//         products: statePart.products.map(product => (
-//           product.id === action.payload.id) ?
-//           {...action.payload,
-//             isFavorite: true,
-//           } :
-//           product),
-//       };
