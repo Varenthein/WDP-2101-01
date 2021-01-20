@@ -23,7 +23,6 @@ class NewFurniture extends React.Component {
     const { activeCategory, activePage } = this.state;
 
     const categoryProducts = products.filter(item => item.category === activeCategory);
-    const pagesCount = Math.ceil(categoryProducts.length / 8);
 
     let furniturePerPage;
     if (deviceType === 'mobile') {
@@ -33,6 +32,7 @@ class NewFurniture extends React.Component {
     } else if (deviceType === 'desktop') {
       furniturePerPage = 8;
     }
+    const pagesCount = Math.ceil(categoryProducts.length / furniturePerPage);
 
     const dots = [];
     for (let i = 0; i < pagesCount; i++) {
@@ -76,11 +76,13 @@ class NewFurniture extends React.Component {
             </div>
           </div>
           <div className='row'>
-            {categoryProducts.slice(activePage * furniturePerPage, (activePage + 1) * furniturePerPage).map(item => (
-              <div key={item.id} className='col-3'>
-                <ProductBox {...item} />
-              </div>
-            ))}
+            {categoryProducts
+              .slice(activePage * furniturePerPage, (activePage + 1) * furniturePerPage)
+              .map(item => (
+                <div key={item.id} className='col-3'>
+                  <ProductBox {...item} />
+                </div>
+              ))}
           </div>
         </div>
       </div>
