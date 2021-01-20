@@ -19,6 +19,8 @@
     display: flex;
     align-items: center;
     position: relative;
+    cursor: pointer;
+
     @include mobile {
       border: none;
       border-bottom: 1px solid $form-border-color;
@@ -60,25 +62,51 @@
       z-index: 0;
     }
 
-    select {
-      -webkit-appearance: none;
-      border: 0;
-      background-color: $form-select-background;
-      padding: 5px 30px 5px 35px;
-      position: relative;
+    ul {
+      list-style-type: none;
+      // width: 205px;
+      margin: 0;
+      padding: 10px 30px 10px 35px;
       z-index: 1;
-      font-size: 0.8rem;
+      font-size: 14px;
+    }
 
-      //Transition
-      transition: 0.8s;
-      position: relative;
-      overflow: hidden;
+    ul ul {
+      display: none;
+      position: absolute;
+      padding: 10px 0 0 0;
+      // width: 207px;
+      width: 180px;
+      top: 33px;
+      left: -1px;
+    }
 
-      &:focus,
-      &:hover {
-        outline: none;
-        color: $orange-main;
+    ul:hover ul {
+      display: block;
+    }
+
+    ul ul li {
+      border: 1px solid $form-border-color;
+      background-color: #ffffff;
+
+      &:not(:last-child) {
+        border-bottom: none;
       }
+
+      &:hover {
+        background-color: $orange-main;
+
+        a {
+          color: #ffffff;
+        }
+      }
+    }
+
+    a {
+      color: $text-primary-dark;
+      text-decoration: none;
+      padding: 10px 30px 10px 35px;
+      display: flex;
     }
   }
 
