@@ -1,4 +1,4 @@
-@import "../../../styles/settings.scss";
+@import '../../../styles/settings.scss';
 
 .root {
   border: 1px solid $form-border-color;
@@ -11,30 +11,7 @@
     display: flex;
     align-items: center;
     position: relative;
-    
-    // Animation of Hover
-    &:hover{
-        background-color: $orange-main;
-    }
-    
-    &::before{
-    content: "";
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 0%;
-    background: #363636;
-    z-index: 0;
-    transition: 0.8s;
-    
-    bottom: 0;
-    border-radius: 70% 0% 0 0;
-  }
-  
-  &:hover::before{
-      height: 100%;
-  }
-    
+    cursor: pointer;
 
     .icon:first-child {
       color: $form-icon-color;
@@ -49,26 +26,50 @@
       z-index: 0;
     }
 
-    select {
-      -webkit-appearance: none;
-      border: 0;
-      background-color: $form-select-background;
-      padding: 5px 30px 5px 35px;
-      position: relative;
+    ul {
+      list-style-type: none;
+      width: 205px;
+      margin: 0;
+      padding: 10px 30px 10px 35px;
       z-index: 1;
-      font-size: 0.8rem;
-      
-      //Transition
-      transition: 0.8s;
-      position: relative;
-      overflow: hidden;
-      
-        &:focus,&:hover{
-          outline: none; 
-          color: $orange-main;
+      font-size: 14px;
+    }
+
+    ul ul {
+      display: none;
+      position: absolute;
+      padding: 10px 0 0 0;
+      width: 207px;
+      top: 33px;
+      left: -1px;
+    }
+
+    ul:hover ul {
+      display: block;
+    }
+
+    ul ul li {
+      border: 1px solid $form-border-color;
+      background-color: #ffffff;
+
+      &:not(:last-child) {
+        border-bottom: none;
       }
-      
-      
+
+      &:hover {
+        background-color: $orange-main;
+
+        a {
+          color: #ffffff;
+        }
+      }
+    }
+
+    a {
+      color: $text-primary-dark;
+      text-decoration: none;
+      padding: 10px 30px 10px 35px;
+      display: flex;
     }
   }
 
