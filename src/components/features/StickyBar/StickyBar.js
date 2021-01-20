@@ -1,12 +1,17 @@
 import React from 'react';
 import styles from './StickyBar.module.scss';
-import Button from '../../common/Button/Button';
+import PropTypes from 'prop-types';
+// import Button from '../../common/Button/Button';
 
-const StickyBar = () => (
+const StickyBar = ({ compare, imageSource }) => (
   <div className={styles.component}>
-    <p>Tu będą się generowały zdjęcia wybranych produktów. Tylko jak to zrobić? :| </p>
-    <Button>Compare</Button>
+    <img src={imageSource} className={styles.photo} />
   </div>
 );
+
+StickyBar.propTypes = {
+  compare: PropTypes.array,
+  imageSource: PropTypes.string,
+};
 
 export default StickyBar;
