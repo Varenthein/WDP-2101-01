@@ -1,13 +1,20 @@
 import React from 'react';
 import styles from './StickyBar.module.scss';
 import PropTypes from 'prop-types';
-// import Button from '../../common/Button/Button';
+import Compared from '../Compared/ComparedContainer';
+import Button from '../../common/Button/Button';
 
-const StickyBar = ({ compare, imageSource }) => (
-  <div className={styles.component}>
-    <img src={imageSource} className={styles.photo} />
-  </div>
-);
+const StickyBar = ({ compare }) =>
+  compare.length > 0 ? (
+    <div className={styles.component}>
+      {compare.map(productData => (
+        <Compared key={productData.id} {...productData} />
+      ))}
+      <Button className={styles.button}>Compare</Button>
+    </div>
+  ) : (
+    ''
+  );
 
 StickyBar.propTypes = {
   compare: PropTypes.array,

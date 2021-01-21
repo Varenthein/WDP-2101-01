@@ -8,8 +8,20 @@
   background-color: $dark-value-1;
   display: flex;
   justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
 
-  .photo {
-    
+.button {
+  display: block;
+  background: $dark-value-3;
+  color: $white;
+  padding: 5px 10px;
+  line-height: 24px;
+
+
+  &:hover {
+    background: $btn-dark-background-hover;
+    color: $white;
   }
 }
