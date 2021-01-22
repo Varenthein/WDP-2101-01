@@ -13,6 +13,10 @@ const MenuBar = ({ children }) => (
           <ProductSearch />
         </div>
         <div className={'col-auto ' + styles.menu}>
+          <input type='checkbox' id='nav' className={styles.menuCheckbox} />
+          <label htmlFor='nav' className={styles.menuButton}>
+            <span className={styles.menuIcon}></span>
+          </label>
           <ul>
             <li>
               <a href='#' className={styles.active}>
