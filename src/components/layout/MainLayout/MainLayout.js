@@ -3,7 +3,11 @@ import PropTypes from 'prop-types';
 
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
-import { ADD_WINDOW_WIDTH } from '../../../redux/deviceTypeRedux';
+
+export function get_window_width() {
+  let window_width = document.documentElement.clientWidth;
+  return window_width;
+}
 
 class MainLayout extends React.Component {
   static propTypes = {
@@ -12,9 +16,9 @@ class MainLayout extends React.Component {
   };
   constructor(props) {
     super(props);
-    this.props.addWindowWidth(ADD_WINDOW_WIDTH);
+    this.props.addWindowWidth(get_window_width());
     window.addEventListener('resize', () =>
-      this.props.addWindowWidth(ADD_WINDOW_WIDTH)
+      this.props.addWindowWidth(get_window_width())
     );
   }
   render() {
