@@ -54,7 +54,10 @@ $sale-text: $white;
 
 $product-title: $orange-main;
 
-$star-color: $dark-value-3;
+$transition-time: 0.25s;
+
+$header-topbar-bg: #434343;
+$header-bg: #363636;
 
 $expired-linethrough: $black;
 $expired-text: $grey;
@@ -67,47 +70,46 @@ $new-feature-border: $light-value-6;
 $new-feature-heading-border: $orange-main;
 $new-feature-heading-text: $orange-main;
 
-$menu-text: $dark-value-3;
-$menu-border-hover: $orange-main;
+$menu-text: $dark-value-3;	
+$menu-border-hover: $orange-main;	
 
-$dots-background-hover: $white;
-$dot-background: $light-value-1;
+$dots-background-hover: $white;	
+$dot-background: $light-value-1;	
 $dot-background-hover: $orange-main;
 
-// Search
-$form-border-color: $dark-value-4;
-$form-icon-color: $orange-main;
-$form-select-background: $transparent;
+// Search	
+$form-border-color: $dark-value-4;	
+$form-icon-color: $orange-main;	
+$form-select-background: $transparent;	
 
-// ****** LAYOUT ******
-// Header
-$header-bg: $dark-value-2;
-$header-topbar-bg: $dark-value-1;
-$header-phone: $light-value-2;
-$cart-text: $white;
-$header-icon: $orange-main;
+// ****** LAYOUT ******	
+// Header	
+$header-bg: $dark-value-2;	
+$header-topbar-bg: $dark-value-1;	
+$header-phone: $light-value-2;	
+$cart-text: $white;	
+$header-icon: $orange-main;	
 
-// Menu
-$menu-background: $white;
-$menu-shadow: $dark-value-5;
-$menu-text-hover: $white;
-$menu-background-hover: $orange-main;
-$menu-mobile-background: $orange-main;
-$menu-mobile-bars: $white;
+// Menu	
+$menu-background: $white;	
+$menu-shadow: $dark-value-5;	
+$menu-text-hover: $white;	
+$menu-background-hover: $orange-main;	
 
-// Top bar
-$topbar-text: $white;
-$topbar-text-hover: $orange-main;
+// Top bar	
+$topbar-text: $white;	
+$topbar-text-hover: $orange-main;	
 
-// Footer
-$footer-claim-bg: $dark-value-3;
-$footer-bg: $dark-value-2;
-$footer-text-primary: $white;
-$footer-text-secondary: $light-value-4;
-$footer-icon-hover: $orange-main;
+// Footer	
+$footer-claim-bg: $dark-value-3;	
+$footer-bg: $dark-value-2;	
+$footer-text-primary: $white;	
+$footer-text-secondary: $light-value-4;	
+$footer-icon-hover: $orange-main;	
 
-// ****** TYPOGRAPHY ******
-$text-primary-dark: $dark-value-3;
+// ****** TYPOGRAPHY ******	
+$text-primary-dark: $dark-value-3;	
 
-// ****** BASE ******
-$base-padding: 24px;
+// ****** BASE ******	
+$base-padding: 24px;	
+
