@@ -92,8 +92,26 @@ const Footer = ({ children }) => (
                 </li>
               </ul>
             </div>
-            <img src='./images/cards.png' alt='Supported credit cards' />
           </div>
+        </div>
+        <div className={styles.paymentMethods}>
+          <ul>
+            <li>
+              <img src='./images/visa.png' alt='Support/ed credit cards' />
+            </li>
+            <li>
+              <img src='./images/mastercard.png' alt='Support/ed credit cards' />
+            </li>
+            <li>
+              <img src='./images/discover.png' alt='Support/ed credit cards' />
+            </li>
+            <li>
+              <img src='./images/amex.png' alt='Support/ed credit cards' />
+            </li>
+            <li>
+              <img src='./images/paypal.png' alt='Support/ed credit cards' />
+            </li>
+          </ul>
         </div>
       </div>
     </div>
