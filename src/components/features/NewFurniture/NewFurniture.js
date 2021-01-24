@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import styles from './NewFurniture.module.scss';
-import ProductBox from '../../common/ProductBox/ProductBox';
+import ProductBox from '../../common/ProductBox/ProductBoxContainer';
 
 class NewFurniture extends React.Component {
   state = {
@@ -108,6 +108,9 @@ NewFurniture.propTypes = {
       stars: PropTypes.number,
       promo: PropTypes.string,
       newFurniture: PropTypes.bool,
+      imageSource: PropTypes.string,
+      isFavorite: PropTypes.bool,
+      isExchange: PropTypes.bool,
     })
   ),
 };

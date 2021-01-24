@@ -16,6 +16,13 @@
     background-color: $btn-dark-background-hover;
     text-decoration: none;
   }
+
+  &:hover {
+    transform: translateX(20%);
+    background-color: $orange-main;
+    color: $white;
+    transition: $transition-time linear;
+  }
 }
 
 .small {
@@ -24,6 +31,13 @@
   line-height: 24px;
   padding: 5px 10px;
   font-weight: 400;
+
+  &:hover {
+    transform: translateY(20%);
+    background-color: $dark-value-3;
+    color: $white;
+    transition: $transition-time ease-in-out;
+  }
 }
 
 .outline {
@@ -37,5 +51,12 @@
   &:not(.noHover):hover {
     background-color: $btn-light-background-hover;
     color: $btn-light-text-hover;
+  }
+
+  &:hover {
+    transform: translateX(20%);
+    background-color: $dark-value-3;
+    color: $white;
+    transition: $transition-time linear;
   }
 }

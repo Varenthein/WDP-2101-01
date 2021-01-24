@@ -5,6 +5,8 @@ import cartReducer from './cartRedux';
 import categoriesReducer from './categoriesRedux';
 import productsReducer from './productsRedux';
 import deviceTypeReducer from './deviceTypeRedux';
+// import favoritesReducer from './favoritesRedux';
+
 
 // define reducers
 const reducers = {
