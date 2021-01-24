@@ -118,7 +118,12 @@ const Footer = ({ children }) => (
     <div className={styles.bottomBar}>
       <div className='container'>
         <div className='row align-items-center'>
-          <div className='col-12 col-sm-6 col-xl-4 d-none d-xl-block '></div>
+          <div
+            className={
+              'col-12 col-xl-4 d-none d-md-block text-md-center d-xl-block ' +
+              styles.copyright
+            }
+          ></div>
           <div
             className={
               'col-12 col-sm-6 col-xl-4 text-center text-md-left ' + styles.copyright
