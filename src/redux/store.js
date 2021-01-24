@@ -4,6 +4,7 @@ import initialState from './initialState';
 import cartReducer from './cartRedux';
 import categoriesReducer from './categoriesRedux';
 import productsReducer from './productsRedux';
+// import favoritesReducer from './favoritesRedux';
 
 // define reducers
 const reducers = {
