@@ -1,10 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './Promotions.module.scss';
 
-const Promotions = props => {
-  console.log(props);
-  const url =
-    'https://images.pexels.com/photos/509922/pexels-photo-509922.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260';
+const Promotions = ({ promotions }) => {
+  const [largeContent, smallUpContent, smallDownContent] = [...promotions];
   return (
     <div className={styles.root}>
       <div className='container'>
@@ -13,13 +12,13 @@ const Promotions = props => {
             <div
               className={styles.promoLarge}
               style={{
-                backgroundImage: `url('${url}')`,
+                backgroundImage: `url('${largeContent.imageUrl}')`,
               }}
             >
               <div className={styles.promoLargeContent}>
-                <h3 className={styles.heading}>guest room</h3>
-                <span className={styles.strong}>sofa</span>
-                <p className={styles.priceOff}>-20%</p>
+                <h3 className={styles.heading}>{largeContent.heading}</h3>
+                <span className={styles.strong}>{largeContent.textStrong}</span>
+                <p className={styles.priceOff}>{largeContent.priceoff}</p>
               </div>
             </div>
           </div>
@@ -29,16 +28,18 @@ const Promotions = props => {
                 <div
                   className={`${styles.promoSmall} ${styles.promoSmallTop}`}
                   style={{
-                    backgroundImage: `url('${url}')`,
+                    backgroundImage: `url('${smallUpContent.imageUrl}')`,
                   }}
                 >
                   <div className={styles.promoSmallContent}>
                     <h3 className={styles.heading}>
-                      <span className={styles.strong}>office </span>
-                      chair
+                      <span className={styles.strong}>
+                        {smallUpContent.textStrong}{' '}
+                      </span>
+                      {smallUpContent.heading}
                     </h3>
-                    <p className={styles.subtitle}>collection</p>
-                    <p className={styles.priceOff}>$200.00</p>
+                    <p className={styles.subtitle}>{smallUpContent.subtitle}</p>
+                    <p className={styles.priceOff}>{smallUpContent.priceoff}</p>
                   </div>
                 </div>
               </div>
@@ -48,14 +49,16 @@ const Promotions = props => {
                 <div
                   className={`${styles.promoSmall} ${styles.promoSmallBottom}`}
                   style={{
-                    backgroundImage: `url('${url}')`,
+                    backgroundImage: `url('${smallDownContent.imageUrl}')`,
                   }}
                 >
                   <h3 className={styles.heading}>
-                    <span className={styles.strong}>special </span>
-                    collection
+                    <span className={styles.strong}>
+                      {smallDownContent.textStrong}{' '}
+                    </span>
+                    {smallDownContent.heading}
                   </h3>
-                  <p className={styles.priceOff}>save up 45% of furniture</p>
+                  <p className={styles.priceOff}>{smallDownContent.priceoff}</p>
                 </div>
               </div>
             </div>
@@ -64,6 +67,10 @@ const Promotions = props => {
       </div>
     </div>
   );
+};
+
+Promotions.propTypes = {
+  promotions: PropTypes.array,
 };
 
 export default Promotions;
