@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
 
 import styles from './NewFurniture.module.scss';
-import ProductBox from '../../common/ProductBox/ProductBox';
+import ProductBox from '../../common/ProductBox/ProductBoxContainer';
 
 import Swipeable from '../../common/Swipeable/Swipeable';
 
@@ -32,14 +32,23 @@ class NewFurniture extends React.Component {
   }
 
   render() {
-    const { categories, products } = this.props;
+    const { categories, products, deviceType } = this.props;
     const { activeCategory, activePage } = this.state;
 
     /// Amount of Product on page
     const amountProduct = 8;
 
     const categoryProducts = products.filter(item => item.category === activeCategory);
-    const pagesCount = Math.ceil(categoryProducts.length / 8);
+
+    let furniturePerPage;
+    if (deviceType === 'mobile') {
+      furniturePerPage = 1;
+    } else if (deviceType === 'tablet') {
+      furniturePerPage = 3;
+    } else if (deviceType === 'desktop') {
+      furniturePerPage = 8;
+    }
+    const pagesCount = Math.ceil(categoryProducts.length / furniturePerPage);
 
     const dots = [];
     for (let i = 0; i < pagesCount; i++) {
@@ -124,6 +133,7 @@ class NewFurniture extends React.Component {
 
 NewFurniture.propTypes = {
   children: PropTypes.node,
+  deviceType: PropTypes.string,
   categories: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string,
@@ -139,6 +149,9 @@ NewFurniture.propTypes = {
       stars: PropTypes.number,
       promo: PropTypes.string,
       newFurniture: PropTypes.bool,
+      imageSource: PropTypes.string,
+      isFavorite: PropTypes.bool,
+      isExchange: PropTypes.bool,
     })
   ),
 };
