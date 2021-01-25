@@ -62,6 +62,11 @@ $expired-text: $grey;
 $btn-price-hover: $orange-main;
 
 // ****** FEATURES ******
+// Promotions
+$promiotions-color-light: $white;
+$promiotions-color-dark: $dark-value-2;
+$promiotions-color-main: $orange-main;
+
 // New feature
 $new-feature-border: $light-value-6;
 $new-feature-heading-border: $orange-main;
@@ -111,4 +116,4 @@ $text-primary-dark: $dark-value-3;
 
 // ****** BASE ******
 $base-padding: 24px;
-$transition-time: .2s;
+$transition-time: 0.2s;
