@@ -85,15 +85,15 @@
     }
   }
 
-  .favorite {
-    background-color: $orange-main;
-    color: $select-hearth;
-  }
+  .favorite{
+        background-color: $btn-dark-background;
+        color: $select-hearth;
+    }
 
-  .exchange {
-    background-color: $orange-main;
-    color: $select-exchange;
-  }
+    .exchange{
+        background-color: $orange-main;
+        color: $select-exchange;
+    }
 
   &:hover {
     .buttons {

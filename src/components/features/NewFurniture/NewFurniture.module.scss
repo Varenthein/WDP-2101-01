@@ -2,6 +2,7 @@
 @import "./../../../styles/mixins.scss";
 
 .root {
+
   @include tablet {
     :global(.row):not(:first-child) {
       display: grid;
