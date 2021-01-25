@@ -31,10 +31,6 @@ class NewFurniture extends React.Component {
     return this.state.numberOfRows;
   }
 
-  clearIndex() {
-    this.setState({ numberOfRows: [] });
-  }
-
   render() {
     const { categories, products } = this.props;
     const { activeCategory, activePage } = this.state;
@@ -86,7 +82,6 @@ class NewFurniture extends React.Component {
               </div>
             </div>
           </div>
-
           {categoryProducts.length <= 8 ? (
             <div className='row' key={uuidv4()}>
               {categoryProducts
@@ -121,7 +116,6 @@ class NewFurniture extends React.Component {
               })}
             </Swipeable>
           )}
-          {this.clearIndex()}
         </div>
       </div>
     );
