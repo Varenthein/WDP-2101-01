@@ -20,6 +20,7 @@ class Feedback extends Component {
         <a>page 3</a>
       </li>,
     ];
+
     return (
       <div className={styles.root}>
         <div className='container'>
