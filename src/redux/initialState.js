@@ -329,6 +329,24 @@ const initialState = {
   cart: {
     products: [],
   },
+  gallery: [
+    {
+      id: 'featured',
+      name: 'FEATURED',
+    },
+    {
+      id: 'topSeller',
+      name: 'TOP SELLER',
+    },
+    {
+      id: 'saleOff',
+      name: 'SALE OFF',
+    },
+    {
+      id: 'topRated',
+      name: 'TOP RATED',
+    },
+  ],
 };
 
 export default initialState;

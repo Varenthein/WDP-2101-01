@@ -1,0 +1,53 @@
+@import "../../../styles/settings.scss";
+
+
+.root {
+  background-color: $gallery-background;
+
+  .imageWrapper {
+    position: relative;
+    width: 100%;
+    height: 500px;
+
+    .image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 60%;
+      padding: 40px 30px 0px;
+
+      div {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+
+        h6 {
+          color: $gallery-text-color;
+          text-transform: lowercase;
+          padding-bottom: 2px;
+          font-weight: 200;
+        }  
+
+        h1 {
+          color: $gallery-green;
+          font-weight: 600;
+          padding-left: 10px;          
+      }
+
+      h1 {
+        color: $gallery-orange;
+        font-weight: 600;
+      }
+    }
+  }
+}}
