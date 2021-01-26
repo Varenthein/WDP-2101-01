@@ -7,7 +7,6 @@ import productsReducer from './productsRedux';
 import deviceTypeReducer from './deviceTypeRedux';
 // import favoritesReducer from './favoritesRedux';
 
-
 // define reducers
 const reducers = {
   cart: cartReducer,
