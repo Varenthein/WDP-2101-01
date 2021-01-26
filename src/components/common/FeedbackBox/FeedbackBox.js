@@ -1,32 +1,32 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './FeedbackBox.module.scss';
 
-const FeedbackBox = props => {
+const FeedbackBox = ({ imageUrl, text, author, aboutAuthor }) => {
   return (
     <div className={styles.root}>
       <div className={styles.box}>
         <span className={styles.boxQuoteStamp}></span>
-        <p className={styles.boxQuoteText}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae cumque harum
-          soluta voluptate, accusantium iure sunt neque consectetur natus fuga! Lorem
-          ipsum dolor sit amet consectetur adipisicing elit. Vitae cumque harum soluta
-          voluptate.
-        </p>
+        <p className={styles.boxQuoteText}>{text}</p>
         <div className={styles.boxUser}>
           <div className={styles.userImage}>
-            <img
-              src='https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
-              alt='user feedback'
-            />
+            <img src={imageUrl} alt='user feedback' />
           </div>
           <div className={styles.userInfo}>
-            <p className={styles.userName}>John Smith</p>
-            <small>Our Client</small>
+            <p className={styles.userName}>{author}</p>
+            <small>{aboutAuthor}</small>
           </div>
         </div>
       </div>
     </div>
   );
+};
+
+FeedbackBox.propTypes = {
+  imageUrl: PropTypes.string,
+  text: PropTypes.string,
+  author: PropTypes.string,
+  aboutAuthor: PropTypes.string,
 };
 
 export default FeedbackBox;
