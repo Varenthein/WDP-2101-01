@@ -113,7 +113,6 @@ class NewFurniture extends React.Component {
               enableMouseEvents
             >
               {this.iterationFunction(categoryProducts, amountProduct).map(item => {
-                console.log(item);
                 return (
                   <div className='row' key={uuidv4()}>
                     {categoryProducts
