@@ -38,4 +38,22 @@ dla plików, które zostały wybrane za pomocą `git add` i mają być zapisane 
 
 ## Konwencje i dobre praktyki
 
-DO UZUPEŁNIENIA
+W celu wydajniejszego workflow:
+
+* raz w tygodniu uskutecznialiśmy 45min video-spotkanie całego zespołu
+* codziennie każdy z nas informował resztę o swoich postępach za pomocą DAILY
+* zadania każdy przypisywał sobie sam z pomocą Jiry
+* każdy z nas pilnował porządku na tablicy Kanban i dobierał dla siebie 1-5 zadań z samej góry
+* każdemu zadaniu odpowiadał branch od aktualnego mastera, o tym samym numerze
+* zdolność do merge posiadał nasz PM, któremu każdorazowo należało wysłać Pull Request z krótkim opisem problemu w języku ang.
+
+Struktura katalogów:
+
+* katalog źródłowy src:
+ - components: (komponenty podzielone na kategorie)
+    common
+    features
+    layout
+    views
+ - redux (pliki związane z obsługą Reduxa)
+ - styles (zastosowane style)
