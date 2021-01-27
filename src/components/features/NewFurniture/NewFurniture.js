@@ -20,6 +20,7 @@ class NewFurniture extends React.Component {
 
   handleCategoryChange(newCategory) {
     this.setState({ activeCategory: newCategory });
+    this.setState({ activePage: 0 });
   }
 
   // Function to check how many divs
