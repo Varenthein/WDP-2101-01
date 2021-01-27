@@ -23,12 +23,16 @@ class NewFurniture extends React.Component {
   }
 
   // Function to check how many divs
-  iterationFunction(x) {
-    let numberOfIteration = Math.floor(x.length / 8);
+  iterationFunction(x, amountOfProduct) {
+    let numberOfIteration = Math.floor(x.length / amountOfProduct);
     for (let i = 0; i <= numberOfIteration; i++) {
       this.state.numberOfRows.push({ id: i });
     }
     return this.state.numberOfRows;
+  }
+
+  clearIndex() {
+    this.state.numberOfRows = [];
   }
 
   render() {
@@ -91,7 +95,7 @@ class NewFurniture extends React.Component {
               </div>
             </div>
           </div>
-          {categoryProducts.length <= 8 ? (
+          {categoryProducts.length <= amountProduct ? (
             <div className='row' key={uuidv4()}>
               {categoryProducts
                 .slice(activePage * amountProduct, (activePage + 1) * amountProduct)
@@ -107,13 +111,18 @@ class NewFurniture extends React.Component {
               onRightAction={() => this.handlePageChange(activePage + 1)}
               enableMouseEvents
             >
-              {this.iterationFunction(categoryProducts).map(item => {
+              {this.iterationFunction(categoryProducts, amountProduct).map(item => {
+                console.log(item);
                 return (
                   <div className='row' key={uuidv4()}>
                     {categoryProducts
                       .slice(
-                        activePage * amountProduct,
-                        (activePage + 1) * amountProduct
+                        activePage === 0
+                          ? activePage + item.id * amountProduct
+                          : activePage * item.id * amountProduct,
+                        activePage === 0
+                          ? (activePage + item.id + 1) * amountProduct
+                          : (activePage * item.id + 1) * amountProduct
                       )
                       .map(item => (
                         <div key={uuidv4()} className='col-3'>
@@ -125,6 +134,7 @@ class NewFurniture extends React.Component {
               })}
             </Swipeable>
           )}
+          {this.clearIndex()}
         </div>
       </div>
     );
