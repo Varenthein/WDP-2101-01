@@ -1,21 +1,59 @@
-@import "../../../styles/settings.scss";
+@import '../../../styles/settings.scss';
+@import './../../../styles/mixins.scss';
 
 .root {
   .footerMenu {
     background-color: $footer-bg;
     padding: 3rem 0;
+    @include tablet {
+      padding: 2rem 0 1rem 0;
+    }
+    @include mobile {
+      padding: 2rem 0 1rem 0;
+    }
+
+    :global(.row) {
+      @include tablet {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @include mobile {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @include mobile-small {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+
+    :global(.col):last-child {
+      @include mobile {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        margin: 0 0 1rem 0;
+      }
+    }
 
     .menuWrapper {
       h6 {
         color: $footer-text-primary;
         text-transform: uppercase;
         margin: 0 0 1rem 0;
+
+        @include mobile-small {
+          margin: 0 0 0.5rem 0;
+        }
       }
 
       ul {
         margin: 0 0 1.5rem 0;
         padding: 0;
         list-style: none;
+        @include mobile-small {
+          margin: 0 0 0.5rem 0;
+        }
+
         li {
           a {
             font-size: 14px;
@@ -34,9 +72,23 @@
       margin: 0;
       padding: 0;
       list-style: none;
+      display: flex;
+      flex-direction: row-reverse;
 
-      li {
-        display: inline-block;
+      @include tablet {
+        flex-direction: row;
+      }
+      @include mobile {
+        flex-direction: row;
+      }
+
+      ul {
+        padding: 0;
+
+        li {
+          display: inline-block;
+          padding-right: 0.65rem;
+        }
       }
     }
   }
