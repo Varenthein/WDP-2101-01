@@ -1,11 +1,11 @@
 
 
 
-# WDP Projekt Zespołowy
+# WDP Projekt Zespołowy 
 
 ## Opis projektu
 
-DO UZUPEŁNIENIA
+Zaprojektowanie strony www sklepu meblowego, zgodnie z wytycznymi klienta w oparciu o technologie JavaScript, SCSS, Redux, React.
 
 ## Demo
 
