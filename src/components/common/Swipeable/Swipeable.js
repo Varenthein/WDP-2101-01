@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 const Swipeable = ({ children, onLeftAction, onRightAction }) => {
   return (
     <SwipeableViews
+      slideStyle={{ overflow: 'visible' }}
       onChangeIndex={(index, indexLatest) => {
         return index > indexLatest ? onRightAction() : onLeftAction();
       }}
