@@ -1,0 +1,111 @@
+@import "./../../../styles//settings.scss";
+
+.root {
+  margin-bottom: 30px;
+}
+
+.promoLarge,
+.promoSmall {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  text-transform: uppercase;
+}
+
+.promoLarge {
+  height: 400px;
+  margin: 15px 0;
+  color: $promiotions-color-light;
+  padding: 30px;
+
+  .promoLargeContent {
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    background-color: rgba($promiotions-color-dark, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    .heading {
+      font-size: 2.5rem;
+      font-weight: 500;
+      opacity: 1;
+      margin-bottom: 0;
+    }
+
+    .strong {
+      font-size: 2.8rem;
+      margin-top: -0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .priceOff {
+      font-size: 2.5rem;
+      border: 3px solid $promiotions-color-light;
+      margin-right: auto;
+      margin-bottom: 0;
+      padding: 0.3rem 0.5rem;
+      font-weight: 500;
+    }
+  }
+}
+
+.promoSmall {
+  height: 185px;
+  margin: 15px 0;
+}
+
+.promoSmallTop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .promoSmallContent {
+    & > * {
+      margin-bottom: 0;
+    }
+
+    .heading {
+      font-size: 2.2rem;
+      font-weight: 400;
+    }
+
+    .subtitle {
+      font-size: 1.5rem;
+      font-weight: 500;
+      letter-spacing: 2px;
+      margin-top: -0.2rem;
+    }
+
+    .priceOff {
+      color: $promiotions-color-main;
+      font-weight: 600;
+      font-size: 2.2rem;
+    }
+  }
+}
+
+.promoSmallBottom {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  & > * {
+    margin-bottom: 0;
+  }
+
+  .heading {
+    font-size: 2rem;
+    color: $promiotions-color-main;
+    font-weight: 400;
+  }
+  .priceOff {
+    font-size: 1.4rem;
+  }
+}
+
+.strong {
+  font-weight: 700;
+}
