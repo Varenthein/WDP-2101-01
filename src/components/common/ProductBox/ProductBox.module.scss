@@ -45,13 +45,6 @@
       line-height: 24px;
       letter-spacing: 1px;
     }
-
-    .stars {
-      a {
-        text-decoration: none;
-        color: $star-color;
-      }
-    }
   }
 
   .line {
@@ -91,12 +84,12 @@
       }
     }
   }
-  
+
   .favorite{
-        background-color: $orange-main;
+        background-color: $btn-dark-background;
         color: $select-hearth;
     }
-    
+
     .exchange{
         background-color: $orange-main;
         color: $select-exchange;
