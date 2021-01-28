@@ -9,7 +9,7 @@ const Compared = ({ imageSource, removeFromCompare }) => (
   <div className={styles.component}>
     <img src={imageSource} alt='compared-product' />
     <div className={styles.imageHover}>
-      <Button onClick={() => removeFromCompare()}>
+      <Button href='javascript:void(0)' onClick={removeFromCompare}>
         <FontAwesomeIcon icon={faTimesCircle}></FontAwesomeIcon>
       </Button>
     </div>

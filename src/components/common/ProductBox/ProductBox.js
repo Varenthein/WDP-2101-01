@@ -55,7 +55,7 @@ const ProductBox = ({
         <Button variant='outline'>
           <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
         </Button>
-        <Button onClick={() => addToCompare()} variant='outline'>
+        <Button href='javascript:void(0)' onClick={addToCompare} variant='outline'>
           <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
         </Button>
       </div>
