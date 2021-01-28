@@ -337,6 +337,9 @@ const initialState = {
     products: [],
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8a98970c458fbbca4925fde19988c15734fe2ddf
   gallery: [
     {
       id: 'featured',
@@ -353,7 +356,10 @@ const initialState = {
     {
       id: 'topRated',
       name: 'TOP RATED',
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 8a98970c458fbbca4925fde19988c15734fe2ddf
   promotions: [
     {
       type: 'large',
@@ -379,7 +385,10 @@ const initialState = {
       heading: 'collection',
       textStrong: 'special',
       priceoff: 'save up 45% of furniture',
+<<<<<<< HEAD
 >>>>>>> 9b986c9ec2be0ba72b49204365f1ca4b49e699f6
+=======
+>>>>>>> 8a98970c458fbbca4925fde19988c15734fe2ddf
     },
   ],
 };
