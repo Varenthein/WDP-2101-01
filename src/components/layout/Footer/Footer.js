@@ -129,7 +129,7 @@ const Footer = ({ children }) => (
               'col-12 col-sm-6 col-xl-4 text-center text-md-left ' + styles.copyright
             }
           >
-            <p>©Copyright 2016 Bazar | All Rights Reserved</p>
+            <p>©Copyright 2021 Bazar | All Rights Reserved</p>
           </div>
           <div
             className={

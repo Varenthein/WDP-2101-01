@@ -1,8 +1,6 @@
 import { connect } from 'react-redux';
-
-import GallerySlider from './GallerySlider';
-
 import { getAll, getGallery } from '../../../redux/productsRedux.js';
+import GallerySlider from './GallerySlider';
 
 const mapStateToProps = state => ({
   products: getAll(state),

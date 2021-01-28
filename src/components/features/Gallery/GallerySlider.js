@@ -9,12 +9,13 @@ import {
   faChevronLeft,
   faChevronRight,
 } from '@fortawesome/free-solid-svg-icons';
-import { 
-  //farStar, 
-  faHeart, 
-  faEye, 
+import {
+  //farStar,
+  faHeart,
+  faEye,
 } from '@fortawesome/free-regular-svg-icons';
 import Button from '../../common/Button/Button';
+import StarsRating from '../../common/StarsRating/StarsRating';
 
 class GallerySlider extends React.Component {
   state = {
@@ -27,8 +28,11 @@ class GallerySlider extends React.Component {
   }
 
   render() {
-    const { gallery, topSeller } = this.props;
+    const { products, gallery } = this.props;
     const { activeCategory, activeSlidePage } = this.state;
+
+    const topSeller = products.filter(item => item.topSeller);
+
     return (
       <div className={styles.root}>
         <h5 className={styles.title}>FURNITURE GALLERY</h5>
@@ -48,7 +52,7 @@ class GallerySlider extends React.Component {
         </div>
         <div className={styles.sliderImageWrapper}>
           <img
-            src={topSeller[2].image}
+            src={topSeller[5].image}
             alt='Coming soon!'
             className={styles.sliderImage}
           />
@@ -80,14 +84,12 @@ class GallerySlider extends React.Component {
           </div>
           <div className={styles.ratingCard}>
             <div className={styles.priceCirlce}>
-              <h5>$ {topSeller[2].price}</h5>
-              <h6>$ {topSeller[2].oldPrice}</h6>
+              <h5>$ {topSeller[5].price}</h5>
+              <h6>$ {topSeller[5].oldPrice}</h6>
             </div>
             <div className={styles.content}>
-              <h5>{topSeller[2].name}</h5>
-              <div className={styles.stars}>
-
-              </div>
+              <h5>{topSeller[5].name}</h5>
+              <StarsRating />
             </div>
           </div>
           <div className={styles.slider}>
@@ -118,7 +120,7 @@ class GallerySlider extends React.Component {
 
 GallerySlider.propTypes = {
   gallery: PropTypes.array,
-  topSeller: PropTypes.array,
+  products: PropTypes.array,
 };
 
 export default GallerySlider;

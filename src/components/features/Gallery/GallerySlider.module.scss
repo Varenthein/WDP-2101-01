@@ -1,0 +1,11 @@
+@import "../../../styles/settings.scss";
+
+.root {
+
+  .title {
+    color: $primary;
+    font-weight: 600;
+    margin-bottom: 30px;
+    letter-spacing: 1.5px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid $gallery-border-color;
