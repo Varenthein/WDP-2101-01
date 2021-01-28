@@ -20,6 +20,7 @@ class NewFurniture extends React.Component {
 
   handleCategoryChange(newCategory) {
     this.setState({ activeCategory: newCategory });
+    this.setState({ numberOfRows: [] });
     this.setState({ activePage: 0 });
   }
 
@@ -30,10 +31,6 @@ class NewFurniture extends React.Component {
       this.state.numberOfRows.push({ id: i });
     }
     return this.state.numberOfRows;
-  }
-
-  clearIndex() {
-    this.state.numberOfRows = [];
   }
 
   render() {
@@ -134,7 +131,6 @@ class NewFurniture extends React.Component {
               })}
             </Swipeable>
           )}
-          {this.clearIndex()}
         </div>
       </div>
     );
