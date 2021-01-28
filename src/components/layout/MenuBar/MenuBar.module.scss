@@ -44,7 +44,7 @@
       display: none;
     }
 
-    .menuCheckbox:checked ~ ul {
+    .menuCheckbox:checked ~ nav {
       @include mobile {
         visibility: visible;
         opacity: 1;
@@ -118,7 +118,7 @@
       }
     }
 
-    ul {
+    nav {
       margin: 0;
       padding: 0;
       display: flex;
@@ -138,12 +138,6 @@
       @include mobile-fold {
         top: 4rem;
         right: -70%;
-      }
-
-      li {
-        list-style: none;
-        display: flex;
-        align-items: stretch;
       }
     }
 

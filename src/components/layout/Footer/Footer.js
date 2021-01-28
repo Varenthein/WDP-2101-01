@@ -92,19 +92,50 @@ const Footer = ({ children }) => (
                 </li>
               </ul>
             </div>
-            <img src='./images/cards.png' alt='Supported credit cards' />
           </div>
+        </div>
+        <div className={styles.paymentMethods}>
+          <ul>
+            <li>
+              <img src='./images/visa.png' alt='VISA' />
+            </li>
+            <li>
+              <img src='./images/mastercard.png' alt='MasterCard' />
+            </li>
+            <li>
+              <img src='./images/discover.png' alt='Discover' />
+            </li>
+            <li>
+              <img src='./images/amex.png' alt='American Express' />
+            </li>
+            <li>
+              <img src='./images/paypal.png' alt='PayPal' />
+            </li>
+          </ul>
         </div>
       </div>
     </div>
     <div className={styles.bottomBar}>
       <div className='container'>
         <div className='row align-items-center'>
-          <div className='col'></div>
-          <div className={'col text-center ' + styles.copyright}>
-            <p>©Copyright 2016 Bazar | All Rights Reserved</p>
+          <div
+            className={
+              'col-12 col-xl-4 d-none d-md-block text-md-center d-xl-block ' +
+              styles.copyright
+            }
+          ></div>
+          <div
+            className={
+              'col-12 col-sm-6 col-xl-4 text-center text-md-left ' + styles.copyright
+            }
+          >
+            <p>©Copyright 2021 Bazar | All Rights Reserved</p>
           </div>
-          <div className={'col text-right ' + styles.socialMedia}>
+          <div
+            className={
+              'col-12 col-sm-6 col-xl-4 text-center text-sm-right ' + styles.socialMedia
+            }
+          >
             <ul>
               <li>
                 <a href='#'>
