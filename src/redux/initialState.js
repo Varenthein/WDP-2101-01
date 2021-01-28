@@ -333,13 +333,11 @@ const initialState = {
         'https://images.unsplash.com/photo-1499933374294-4584851497cc?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1275&q=80',
     },
   ],
+
   cart: {
     products: [],
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 8a98970c458fbbca4925fde19988c15734fe2ddf
+
   gallery: [
     {
       id: 'featured',
@@ -356,10 +354,9 @@ const initialState = {
     {
       id: 'topRated',
       name: 'TOP RATED',
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 8a98970c458fbbca4925fde19988c15734fe2ddf
+    },
+  ],
+
   promotions: [
     {
       type: 'large',
@@ -385,10 +382,6 @@ const initialState = {
       heading: 'collection',
       textStrong: 'special',
       priceoff: 'save up 45% of furniture',
-<<<<<<< HEAD
->>>>>>> 9b986c9ec2be0ba72b49204365f1ca4b49e699f6
-=======
->>>>>>> 8a98970c458fbbca4925fde19988c15734fe2ddf
     },
   ],
 };

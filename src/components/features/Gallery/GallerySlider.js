@@ -89,7 +89,9 @@ class GallerySlider extends React.Component {
             </div>
             <div className={styles.content}>
               <h5>{topSeller[5].name}</h5>
-              <StarsRating />
+              <div className={styles.stars}>
+                <StarsRating />
+              </div>
             </div>
           </div>
           <div className={styles.slider}>
