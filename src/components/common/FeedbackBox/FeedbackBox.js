@@ -5,19 +5,20 @@ import styles from './FeedbackBox.module.scss';
 const FeedbackBox = ({ imageUrl, text, author, aboutAuthor }) => {
   return (
     <div className={styles.root}>
-      <div className={styles.box}>
+      <figure className={styles.box}>
         <span className={styles.boxQuoteStamp}></span>
-        <p className={styles.boxQuoteText}>{text}</p>
+        <blockquote className={styles.boxQuoteText}>{text}</blockquote>
         <div className={styles.boxUser}>
           <div className={styles.userImage}>
             <img src={imageUrl} alt='user feedback' />
           </div>
           <div className={styles.userInfo}>
-            <p className={styles.userName}>{author}</p>
-            <small>{aboutAuthor}</small>
+            <figcaption className={styles.userName}>
+              {author} <cite>{aboutAuthor}</cite>
+            </figcaption>
           </div>
         </div>
-      </div>
+      </figure>
     </div>
   );
 };
