@@ -1,0 +1,108 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  background-color: $productBox-background;
+  border: 1px solid $productBox-border;
+  margin-bottom: 2rem;
+
+  .photoWrapper{
+    .photo {
+      position: relative;
+      padding-top: 80%;
+      background: {
+        color: $photo-background;
+        size: contain;
+        position: center;
+        repeat: no-repeat;
+      }
+      overflow: hidden;
+      align-items: flex-end;
+
+
+      .buttons {
+        display: flex;
+        opacity: 0;
+      }
+    }
+  }
+
+  .content {
+    text-align: center;
+    padding: 20px;
+
+    h5 {
+      color: $product-title;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 1px;
+    }
+
+    .stars {
+      a {
+        text-decoration: none;
+        color: $star-color;
+      }
+    }
+  }
+
+  .line {
+    margin: 0 10px;
+    border-bottom: 1px solid $productBox-line-primary;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -1px;
+      left: 50%;
+      width: 30px;
+      border-bottom: 4px solid $productBox-line-secondary;
+      transform: translateX(-50%);
+    }
+  }
+
+  .actions {
+    padding: 15px 10px 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .expiredContainer {
+      color: $expired-linethrough;
+      margin-right: 10px;
+
+      .expiredPrice {
+        color: $expired-text;
+      }
+    }
+  }
+
+  .favorite{
+        background-color: $orange-main;
+        color: $select-hearth;
+    }
+
+    .exchange{
+        background-color: $orange-main;
+        color: $select-exchange;
+    }
+
+  &:hover {
+    .buttons {
+      opacity: 1;
+      display: flex;
+      justify-content: center;
+      z-index: 1;
+    }
+
+    .Button {
+      background-color: $btn-price-hover;
+    }
+  }
+}
