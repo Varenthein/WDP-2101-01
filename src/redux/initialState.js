@@ -363,6 +363,35 @@ const initialState = {
       priceoff: 'save up 45% of furniture',
     },
   ],
+  feedback: [
+    {
+      id: 1,
+      imageUrl:
+        'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+      text:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae cumque harum soluta voluptate, accusantium iure sunt neque consectetur natus fuga! Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae cumque harum soluta voluptate.',
+      author: 'John Smith',
+      aboutAuthor: 'Our Client',
+    },
+    {
+      id: 2,
+      imageUrl:
+        'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+      text:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae cumque harum soluta voluptate, accusantium iure sunt neque consectetur natus fuga! Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+      author: 'Samantha Stress',
+      aboutAuthor: 'Our Client',
+    },
+    {
+      id: 3,
+      imageUrl:
+        'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+      text:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae cumque harum soluta voluptate.',
+      author: 'Mitis Novel',
+      aboutAuthor: 'Our Client',
+    },
+  ],
 };
 
 export default initialState;
