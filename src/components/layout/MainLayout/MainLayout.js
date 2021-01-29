@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
+import Brands from '../Brands/BrandsContainer';
 
 export function get_window_width() {
   let window_width = document.documentElement.clientWidth;
@@ -27,10 +28,15 @@ class MainLayout extends React.Component {
       <div>
         <Header />
         {children}
+        <Brands />
         <Footer />
       </div>
     );
   }
 }
+
+MainLayout.propTypes = {
+  brands: PropTypes.array,
+};
 
 export default MainLayout;

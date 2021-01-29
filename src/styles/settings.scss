@@ -17,6 +17,7 @@ $black: #000;
 $orange-main: #d58e32;
 $select-hearth: #fc3000;
 $select-exchange: #33cc66;
+$dark-red : #662727;
 
 // *********** ASSIGN COLORS TO COMPONENTS ***********
 
@@ -86,7 +87,7 @@ $form-select-background: $transparent;
 
 // ****** LAYOUT ******
 // Header
-$header-bg: $dark-value-2;
+$header-bg: $dark-red;
 $header-topbar-bg: $dark-value-1;
 $header-phone: $light-value-2;
 $cart-text: $white;
