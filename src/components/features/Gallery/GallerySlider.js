@@ -52,7 +52,7 @@ class GallerySlider extends React.Component {
         </div>
         <div className={styles.sliderImageWrapper}>
           <img
-            src={topSeller[5].image}
+            src={styles.image}
             alt='Coming soon!'
             className={styles.sliderImage}
           />
