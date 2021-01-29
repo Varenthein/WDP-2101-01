@@ -336,6 +336,57 @@ const initialState = {
   cart: {
     products: [],
   },
+  brands: [
+    {
+      id: '1',
+      image: 'https://cdn.pixabay.com/photo/2013/11/28/11/32/dog-220324_960_720.jpg',
+    },
+    {
+      id: '2',
+      image:
+        'https://cdn.pixabay.com/photo/2015/08/27/00/34/elephant-909273_960_720.jpg',
+    },
+    {
+      id: '3',
+      image:
+        'https://cdn.pixabay.com/photo/2017/07/04/10/57/quality-2470673_960_720.png',
+    },
+    {
+      id: '4',
+      image:
+        'https://cdn.pixabay.com/photo/2018/02/22/07/03/silhouette-3172280_960_720.png',
+    },
+    {
+      id: '5',
+      image:
+        'https://cdn.pixabay.com/photo/2020/09/07/13/42/rooster-5551912_960_720.jpg',
+    },
+    {
+      id: '6',
+      image: 'https://cdn.pixabay.com/photo/2015/08/18/21/26/dog-894851_960_720.jpg',
+    },
+    {
+      id: '7',
+      image:
+        'https://cdn.pixabay.com/photo/2017/10/05/11/54/seagull-2819181_960_720.jpg',
+    },
+    {
+      id: '8',
+      image: 'https://cdn.pixabay.com/photo/2015/10/15/03/04/wagon-988818_960_720.jpg',
+    },
+    {
+      id: '9',
+      image:
+        'https://cdn.pixabay.com/photo/2015/08/26/21/49/kangaroo-909138_960_720.jpg',
+    },
+    {
+      id: '10',
+      image: 'https://cdn.pixabay.com/photo/2020/02/11/14/34/bear-4839771_960_720.jpg',
+    },
+    {
+      id: '11',
+      image:
+        'https://cdn.pixabay.com/photo/2016/11/22/11/48/mountain-1849091_960_720.png',
   promotions: [
     {
       type: 'large',
