@@ -6,6 +6,23 @@
   margin-bottom: 2rem;
 
   .photoWrapper{
+
+    .counter {
+      position: absolute;
+      display: none;
+      top: 38%;
+      left: 50%;
+      transform: translate(-50%,0);
+      width: 80%;
+    }
+    .addToCart{
+      position: absolute;
+      display: none;
+      top: 35%;
+      left: 30%;
+      transform: translate(0,-46%);
+      opacity: 0.8;
+    }
     .photo {
       position: relative;
       padding-top: 80%;
@@ -22,6 +39,12 @@
       .buttons {
         display: flex;
         opacity: 0;
+      }
+    }
+
+    &:hover{
+      .addToCart, .counter{
+        display: block;
       }
     }
   }

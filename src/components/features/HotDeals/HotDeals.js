@@ -2,8 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import styles from './HotDeals.module.scss';
-import HotDealBox from '../../common/HotDealBox/HotDealBox';
-import Swipeable from '../../common/Swipeable/Swipeable';
+import HotDealBox from '../../common/HotDealBox/HotDealBoxContainer';
 import AdvertBox from '../../common/AdvertBox/AdvertBox';
 import { faArrowRight, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

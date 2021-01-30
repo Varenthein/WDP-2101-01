@@ -360,7 +360,6 @@ const initialState = {
   cart: {
     products: [],
   },
-<<<<<<< HEAD
   brands: [
     {
       id: '1',
@@ -412,6 +411,8 @@ const initialState = {
       id: '11',
       image:
         'https://cdn.pixabay.com/photo/2016/11/22/11/48/mountain-1849091_960_720.png',
+    },
+  ],
   promotions: [
     {
       type: 'large',
@@ -466,7 +467,8 @@ const initialState = {
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae cumque harum soluta voluptate.',
       author: 'Mitis Novel',
       aboutAuthor: 'Our Client',
-=======
+    },
+  ],
   ads: [
     {
       id: '1',
@@ -488,7 +490,6 @@ const initialState = {
         'https://cdn.pixabay.com/photo/2018/01/20/09/42/sofa-3094153_960_720.jpg',
       title: 'INDOOR FURNITURE3',
       description: 'SAVE UP TO 50% OF ALL FURNITURE',
->>>>>>> 4ebe49f... stage1
     },
   ],
 };

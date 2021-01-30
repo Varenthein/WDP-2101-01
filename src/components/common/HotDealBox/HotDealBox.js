@@ -11,6 +11,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { faStar as farStar, faHeart } from '@fortawesome/free-regular-svg-icons';
 import Button from '../Button/Button';
+import Counter from '../../common/Counter/Counter';
 
 const HotDealBox = ({
   name,
@@ -33,11 +34,14 @@ const HotDealBox = ({
           backgroundImage: `url("${imageSource}")`,
         }}
       >
-        <div className={styles.buttons}>
+        <div className={styles.addToCart}>
           <Button variant='small'>
             <FontAwesomeIcon icon={faShoppingBasket} /> ADD TO CART
           </Button>
         </div>
+      </div>
+      <div className={styles.counter}>
+        <Counter />
       </div>
     </div>
     <div className={styles.content}>
