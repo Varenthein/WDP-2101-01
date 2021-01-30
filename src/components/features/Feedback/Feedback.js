@@ -2,11 +2,16 @@ import React, { Component } from 'react';
 import styles from './Feedback.module.scss';
 import PropTypes from 'prop-types';
 import FeedbackBox from '../../common/FeedbackBox/FeedbackBox';
+import Swipeable from '../../common/Swipeable/Swipeable';
 
 class Feedback extends Component {
   state = {
     currentPage: 0,
   };
+
+  handlePageChange(newPage) {
+    this.setState({ currentPage: newPage });
+  }
 
   render() {
     const { feedback, feedbackCount } = this.props;
@@ -16,7 +21,12 @@ class Feedback extends Component {
     for (let i = 0; i < feedbackCount; i++) {
       dots.push(
         <li key={i}>
-          <a className={i === currentPage && styles.active}>{i}</a>
+          <a
+            className={i === currentPage && styles.active}
+            onClick={() => this.handlePageChange(i)}
+          >
+            {i}
+          </a>
         </li>
       );
     }
@@ -36,9 +46,24 @@ class Feedback extends Component {
           </div>
           <div className='row'>
             <div className='col'>
-              {feedback.slice(currentPage, currentPage + 1).map(item => (
-                <FeedbackBox key={item.id} {...item} />
-              ))}
+              <Swipeable
+                onLeftAction={() => this.handlePageChange(currentPage - 1)}
+                onRightAction={() => this.handlePageChange(currentPage + 1)}
+                enableMouseEvents
+              >
+                {feedback
+                  .slice(
+                    (currentPage === 0
+                      ? currentPage + feedback.id
+                      : currentPage * feedback.id,
+                    currentPage === 0
+                      ? currentPage + feedback.id + 1
+                      : currentPage * feedback.id + 1)
+                  )
+                  .map(item => (
+                    <FeedbackBox key={item.id} {...item} />
+                  ))}
+              </Swipeable>
             </div>
           </div>
         </div>
