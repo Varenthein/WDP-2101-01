@@ -1,4 +1,5 @@
 @import "../../../styles/settings.scss";
+@import "./../../../styles/mixins.scss";
 
 .root {
   box-shadow: 2px 3.464px 6px rgba($menu-shadow, 0.2);
@@ -6,21 +7,137 @@
 
   :global(.container) > :global(.row) {
     height: 84px;
+    @include tablet {
+      flex-direction: column-reverse;
+      height: 170px;
+
+      :global([class^="col"]):not(:last-child) {
+        margin-top: 2rem;
+        text-align: center;
+      }
+
+      :global([class^="col"]):not(:first-child) {
+        justify-content: center;
+      }
+    }
+
+    @include mobile {
+      height: 150px;
+      display: grid;
+      grid-template-columns: 3fr 1fr;
+
+      :local([class^="col"]):not(:last-child) {
+        text-align: center;
+      }
+    }
+
+    @include mobile-fold {
+      height: 180px;
+    }
   }
 
   .menu {
     display: flex;
     align-self: stretch;
 
-    ul {
+    .menuCheckbox {
+      display: none;
+    }
+
+    .menuCheckbox:checked ~ nav {
+      @include mobile {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+
+    .menuCheckbox:checked + .menuButton .menuIcon {
+      & {
+        background-color: $transparent;
+      }
+    }
+
+    .menuCheckbox:checked + .menuButton .menuIcon::before {
+      & {
+        transform: rotate(135deg);
+        top: 0;
+      }
+    }
+
+    .menuCheckbox:checked + .menuButton .menuIcon::after {
+      & {
+        transform: rotate(-135deg);
+        top: 0;
+      }
+    }
+
+    .menuButton {
+      display: none;
+      @include mobile {
+        display: inline-block;
+        background-color: $menu-mobile-background;
+        width: 3rem;
+        height: 3rem;
+        margin-right: 2rem;
+        align-self: center;
+        border-radius: 3px;
+        position: relative;
+        text-align: center;
+      }
+      @include mobile-small {
+        margin-right: 5px;
+      }
+    }
+
+    .menuIcon {
+      position: relative;
+      margin-top: 1.5rem;
+      &,
+      &::before,
+      &::after {
+        width: 2rem;
+        height: 2px;
+        background-color: $menu-mobile-bars;
+        display: inline-block;
+      }
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        transition: all 0.5s;
+      }
+
+      &::before {
+        top: -0.8rem;
+      }
+
+      &::after {
+        top: 0.8rem;
+      }
+    }
+
+    nav {
       margin: 0;
       padding: 0;
       display: flex;
-
-      li {
-        list-style: none;
-        display: flex;
-        align-items: stretch;
+      transition: all 0.5s;
+      @include mobile {
+        visibility: hidden;
+        opacity: 0;
+        flex-direction: column;
+        position: absolute;
+        background-color: $menu-background;
+        width: 70vw;
+        top: 6rem;
+        right: 4rem;
+        box-shadow: 0 1rem 2rem rgba($black, 0.2);
+        z-index: 10;
+      }
+      @include mobile-fold {
+        top: 4rem;
+        right: -70%;
       }
     }
 
@@ -35,6 +152,12 @@
       border-top: 4px solid $menu-background;
       font-weight: 500;
       letter-spacing: 1px;
+      @include mobile {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        border: none;
+      }
 
       &:hover,
       &.active {

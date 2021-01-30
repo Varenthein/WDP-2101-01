@@ -1,16 +1,53 @@
 @import "../../../styles/settings.scss";
+@import "./../../../styles/mixins.scss";
 
 .root {
   border: 1px solid $form-border-color;
   display: inline-flex;
   height: 45px;
   color: $text-primary-dark;
+  @include mobile {
+    flex-direction: column;
+    height: auto;
+    & > * {
+      padding: 0.5rem;
+    }
+  }
 
   .category {
     border-right: 1px solid $form-border-color;
     display: flex;
     align-items: center;
     position: relative;
+    cursor: pointer;
+
+    @include mobile {
+      border: none;
+      border-bottom: 1px solid $form-border-color;
+    }
+
+    // Animation of Hover
+    &:hover {
+      background-color: $orange-main;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 0%;
+      background: #363636;
+      z-index: 0;
+      transition: 0.8s;
+
+      bottom: 0;
+      border-radius: 70% 0% 0 0;
+    }
+
+    &:hover::before {
+      height: 100%;
+    }
 
     .icon:first-child {
       color: $form-icon-color;
@@ -25,13 +62,51 @@
       z-index: 0;
     }
 
-    select {
-      -webkit-appearance: none;
-      border: 0;
-      background-color: $form-select-background;
-      padding: 5px 30px 5px 35px;
-      position: relative;
+    ul {
+      list-style-type: none;
+      // width: 205px;
+      margin: 0;
+      padding: 10px 30px 10px 35px;
       z-index: 1;
+      font-size: 14px;
+    }
+
+    ul ul {
+      display: none;
+      position: absolute;
+      padding: 10px 0 0 0;
+      // width: 207px;
+      width: 180px;
+      top: 33px;
+      left: -1px;
+    }
+
+    ul:hover ul {
+      display: block;
+    }
+
+    ul ul li {
+      border: 1px solid $form-border-color;
+      background-color: #ffffff;
+
+      &:not(:last-child) {
+        border-bottom: none;
+      }
+
+      &:hover {
+        background-color: $orange-main;
+
+        a {
+          color: #ffffff;
+        }
+      }
+    }
+
+    a {
+      color: $text-primary-dark;
+      text-decoration: none;
+      padding: 10px 30px 10px 35px;
+      display: flex;
     }
   }
 
@@ -45,6 +120,12 @@
       padding-left: 10px;
       font-size: 14px;
       outline: none;
+      @include mobile {
+        width: 170px;
+      }
+      @include mobile-small {
+        width: 160px;
+      }
 
       &::placeholder {
         color: $text-primary-dark;

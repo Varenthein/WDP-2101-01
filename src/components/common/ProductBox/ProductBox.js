@@ -3,22 +3,24 @@ import PropTypes from 'prop-types';
 
 import styles from './ProductBox.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faStar,
-  faExchangeAlt,
-  faShoppingBasket,
-} from '@fortawesome/free-solid-svg-icons';
-import { faStar as farStar, faHeart } from '@fortawesome/free-regular-svg-icons';
+import { faExchangeAlt, faShoppingBasket } from '@fortawesome/free-solid-svg-icons';
+import { faStar as faHeart } from '@fortawesome/free-regular-svg-icons';
 import Button from '../Button/Button';
+import StarsRating from './../StarsRating/StarsRating';
 
 const ProductBox = ({
   name,
   price,
   promo,
   stars,
+  addToCompare,
+  userRating,
   imageSource,
   oldPrice,
-  addToCompare,
+  isExchange,
+  isFavorite,
+  toggleFavorite,
+  id,
 }) => (
   <div className={styles.root}>
     <div
@@ -31,31 +33,32 @@ const ProductBox = ({
       <div className={styles.buttons}>
         <Button variant='small'>Quick View</Button>
         <Button variant='small'>
-          <FontAwesomeIcon icon={faShoppingBasket}></FontAwesomeIcon> ADD TO CART
+          <FontAwesomeIcon icon={faShoppingBasket} /> ADD TO CART
         </Button>
       </div>
     </div>
     <div className={styles.content}>
       <h5>{name}</h5>
       <div className={styles.stars}>
-        {[1, 2, 3, 4, 5].map(i => (
-          <a key={i} href='#'>
-            {i <= stars ? (
-              <FontAwesomeIcon icon={faStar}>{i} stars</FontAwesomeIcon>
-            ) : (
-              <FontAwesomeIcon icon={farStar}>{i} stars</FontAwesomeIcon>
-            )}
-          </a>
-        ))}
+        <StarsRating rating={stars} userRating={userRating} />
       </div>
     </div>
-    <div className={styles.line}></div>
+    <div className={styles.line} />
     <div className={styles.actions}>
       <div className={styles.outlines}>
-        <Button variant='outline'>
+        <Button
+          variant='outline'
+          className={isFavorite === true ? styles.favorite : 'nonclass'}
+          onClick={event => `${toggleFavorite({ id })} ${event.preventDefault()}`}
+        >
           <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
         </Button>
-        <Button href='javascript:void(0)' onClick={addToCompare} variant='outline'>
+        <Button
+          href='javascript:void(0)'
+          onClick={addToCompare}
+          variant='outline'
+          className={isExchange === true ? styles.exchange : 'nonclass'}
+        >
           <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
         </Button>
       </div>
@@ -78,9 +81,14 @@ ProductBox.propTypes = {
   oldPrice: PropTypes.number,
   promo: PropTypes.string,
   stars: PropTypes.number,
+  userRating: PropTypes.number,
   imageSource: PropTypes.string,
   addToCompare: PropTypes.func,
   compare: PropTypes.array,
+  isExchange: PropTypes.bool,
+  isFavorite: PropTypes.bool,
+  toggleFavorite: PropTypes.func,
+  id: PropTypes.string,
 };
 
 export default ProductBox;

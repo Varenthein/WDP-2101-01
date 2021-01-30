@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { NavLink } from 'react-router-dom';
 
 import ProductSearch from '../../features/ProductSearch/ProductSearch';
 
@@ -13,31 +14,33 @@ const MenuBar = ({ children }) => (
           <ProductSearch />
         </div>
         <div className={'col-auto ' + styles.menu}>
-          <ul>
-            <li>
-              <a href='#' className={styles.active}>
-                Home
-              </a>
-            </li>
-            <li>
-              <a href='#'>Furniture</a>
-            </li>
-            <li>
-              <a href='#'>Chair</a>
-            </li>
-            <li>
-              <a href='#'>Table</a>
-            </li>
-            <li>
-              <a href='#'>Sofa</a>
-            </li>
-            <li>
-              <a href='#'>Bedroom</a>
-            </li>
-            <li>
-              <a href='#'>Blog</a>
-            </li>
-          </ul>
+          <input type='checkbox' id='nav' className={styles.menuCheckbox} />
+          <label htmlFor='nav' className={styles.menuButton}>
+            <span className={styles.menuIcon}></span>
+          </label>
+          <nav className={styles.menu}>
+            <NavLink exact to='/' activeClassName={styles.active}>
+              Home
+            </NavLink>
+            <NavLink exact to='/shop/furniture' activeClassName={styles.active}>
+              Furniture
+            </NavLink>
+            <NavLink exact to='/shop/chair' activeClassName={styles.active}>
+              Chair
+            </NavLink>
+            <NavLink exact to='/shop/table' activeClassName={styles.active}>
+              Table
+            </NavLink>
+            <NavLink exact to='/shop/sofa' activeClassName={styles.active}>
+              Sofa
+            </NavLink>
+            <NavLink exact to='/shop/bedroom' activeClassName={styles.active}>
+              Bedroom
+            </NavLink>
+            <NavLink exact to='/blog' activeClassName={styles.active}>
+              Blog
+            </NavLink>
+          </nav>
         </div>
       </div>
     </div>

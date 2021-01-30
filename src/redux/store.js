@@ -1,10 +1,12 @@
 import { combineReducers, createStore } from 'redux';
 import initialState from './initialState';
-
 import cartReducer from './cartRedux';
 import categoriesReducer from './categoriesRedux';
 import productsReducer from './productsRedux';
 import compareReducer from './compareRedux';
+import deviceTypeReducer from './deviceTypeRedux';
+import promotionsReducer from './promotionsRedux';
+// import favoritesReducer from './favoritesRedux';
 
 // define reducers
 const reducers = {
@@ -12,6 +14,8 @@ const reducers = {
   categories: categoriesReducer,
   products: productsReducer,
   compare: compareReducer,
+  deviceType: deviceTypeReducer,
+  promotions: promotionsReducer,
 };
 
 // add blank reducers for initial state properties without reducers
