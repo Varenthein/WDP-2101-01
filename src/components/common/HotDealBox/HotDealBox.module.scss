@@ -4,9 +4,10 @@
   background-color: $productBox-background;
   border: 1px solid $productBox-border;
   margin-bottom: 2rem;
+  height: 100%;
 
   .photoWrapper{
-
+    height: 282px;
     .counter {
       position: absolute;
       display: none;
