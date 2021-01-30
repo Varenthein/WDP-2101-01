@@ -7,6 +7,7 @@ import { withCookies, Cookies } from 'react-cookie';
 
 import './styles/bootstrap.scss';
 import './styles/global.scss';
+import CloseButton from '../src/components/common/Button/CloseButton';
 
 import MainLayout from './components/layout/MainLayout/MainLayoutContainer.js';
 import Homepage from './components/views/Homepage/Homepage';
@@ -35,7 +36,7 @@ class App extends Component {
         <div className="cookieInfo">
           <h6>Ta strona wykorzystuje pliki cookies.</h6>
           {user && <p>{user}</p>}
-          <button variant="cookie" onClick={this.handleCookie}>x</button>
+          <CloseButton />
         </div>
         <Provider store={store}>
           <BrowserRouter>
