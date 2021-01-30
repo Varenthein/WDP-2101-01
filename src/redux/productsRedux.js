@@ -5,6 +5,9 @@ export const getCount = ({ products }) => products.length;
 export const getNew = ({ products }) =>
   products.filter(item => item.newFurniture === true);
 
+export const getLimitedProducts = ({ products }, limit) =>
+  products.filter((products, idx) => idx <= limit - 1);
+
 const createActionName = name => `app/products/${name}`;
 
 /* action types */
