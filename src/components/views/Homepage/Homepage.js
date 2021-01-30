@@ -5,6 +5,7 @@ import FeatureBoxes from '../../features/FeatureBoxes/FeatureBoxes';
 import NewFurniture from '../../features/NewFurniture/NewFurnitureContainer';
 import StickyBar from '../../features/StickyBar/StickyBarContainer';
 import Promotions from './../../features/Promotions/PromotionsContainer';
+import Feedback from '../../features/Feedback/FeedbackContainer';
 
 const Homepage = () => (
   <div className={styles.root}>
@@ -12,6 +13,7 @@ const Homepage = () => (
     <Promotions />
     <NewFurniture />
     <StickyBar />
+    <Feedback />
   </div>
 );
 

@@ -1,0 +1,53 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  // width: 100vw;
+
+  .wrapper {
+    height: 150px;
+    margin: 20px 0;
+    padding: 20px 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    border-color: $grey;
+
+    .arrow {
+      height: 100%;
+      width: 5%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $btn-dark-background;
+      color: $white;
+      cursor: pointer;
+      font-size: 15px;
+      padding: 0 15px;
+      width: 30px;
+    }
+
+    .brandList {
+      overflow: hidden;
+      height: 100%;
+      display: flex;
+      margin: 0 15px;
+
+      .brands {
+        min-width: 13.8%;
+        display: flex;
+        justify-content: center;
+        border: 1px solid;
+        border-color: $grey;
+        margin: 0 15px;
+        align-items: center;
+
+        img {
+          height: 60%;
+          opacity: 50%;
+        }
+      }
+    }
+  }
+}
