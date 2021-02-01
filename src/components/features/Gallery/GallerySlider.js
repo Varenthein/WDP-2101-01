@@ -84,11 +84,11 @@ class GallerySlider extends React.Component {
           </div>
           <div className={styles.ratingCard}>
             <div className={styles.priceCirlce}>
-              <h5>$ {topSeller[5].price}</h5>
-              <h6>$ {topSeller[5].oldPrice}</h6>
+              <h5>$ {topSeller.price}</h5>
+              <h6>$ {topSeller.oldPrice}</h6>
             </div>
             <div className={styles.content}>
-              <h5>{topSeller[5].name}</h5>
+              <h5>{topSeller.name}</h5>
               <div className={styles.stars}>
                 <StarsRating />
               </div>
