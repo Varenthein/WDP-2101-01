@@ -37,7 +37,23 @@
     }
   }
 
-  .breadcumb {
+  .breadcumbBar {
     height: 47px;
-    background-color: #e2e2e2;  }
+    width: 100%;
+    padding: 10px;
+    background-color: #e2e2e2;
+
+    .breadcumb {
+      padding: 0 5px;
+      color: $dark-value-3;
+      text-transform: capitalize;
+      font-size: 13px;
+      font-weight: 400;
+
+      span {
+        font-weight: 600;
+        color: $orange-main;
+      }
+    }
+  }
 }

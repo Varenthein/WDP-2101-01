@@ -1,8 +1,8 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import styles from './ProductList.module.scss';
 
-const ProductList = () => (
+const ProductList = ({ match }) => (
   <div className={styles.root}>
     <div className='container p-0'>
       <div className='row m-0'>
@@ -18,12 +18,24 @@ const ProductList = () => (
         </div>
       </div>
       <div className='row m-0'>
-        <div className={`${styles.breadcumb}`}></div>
+        <div className={styles.breadcumbBar}>
+          <span className={styles.breadcumb}>Home</span>
+          <span className={styles.breadcumb}>&gt;</span>
+          <span className={styles.breadcumb}>
+            <span>{match.params.categoryId}</span>
+          </span>
+        </div>
       </div>
     </div>
   </div>
 );
 
-// ProductList.propTypes = {};
+ProductList.propTypes = {
+  match: PropTypes.object,
+};
+
+ProductList.defaultProps = {
+  match: { params: '' },
+};
 
 export default ProductList;
