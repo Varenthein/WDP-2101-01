@@ -387,6 +387,8 @@ const initialState = {
       id: '11',
       image:
         'https://cdn.pixabay.com/photo/2016/11/22/11/48/mountain-1849091_960_720.png',
+    },
+  ],
   promotions: [
     {
       type: 'large',
