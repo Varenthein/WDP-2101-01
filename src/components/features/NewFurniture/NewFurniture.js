@@ -4,6 +4,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 import styles from './NewFurniture.module.scss';
 import ProductBox from '../../common/ProductBox/ProductBoxContainer';
+import ProductContainer from '../../common/ProductContainer/ProductContainer';
 
 import Swipeable from '../../common/Swipeable/Swipeable';
 
@@ -12,6 +13,7 @@ class NewFurniture extends React.Component {
     activePage: 0,
     activeCategory: 'bed',
     numberOfRows: [],
+    visible: false,
   };
 
   handlePageChange(newPage) {
@@ -21,7 +23,7 @@ class NewFurniture extends React.Component {
   handleCategoryChange(newCategory) {
     this.setState({ activeCategory: newCategory });
     this.setState({ numberOfRows: [] });
-    this.setState({ activePage: 0 });
+    this.setState({ activePage: 0, visible: false });
   }
 
   // Function to check how many divs
@@ -31,6 +33,27 @@ class NewFurniture extends React.Component {
       this.state.numberOfRows.push({ id: i });
     }
     return this.state.numberOfRows;
+  }
+
+  // Reparing div
+  filteredItems(categoryProducts, activePage, item, amountProduct) {
+    if (categoryProducts.length <= amountProduct) {
+      // Divs without swipeablecategoryProducts
+      return categoryProducts.slice(
+        activePage * amountProduct,
+        (activePage + 1) * amountProduct
+      );
+    } else {
+      // Divs with swipeable
+      return categoryProducts.slice(
+        activePage === 0
+          ? activePage + item.id * amountProduct
+          : activePage * item.id * amountProduct,
+        activePage === 0
+          ? (activePage + item.id + 1) * amountProduct
+          : (activePage * item.id + 1) * amountProduct
+      );
+    }
   }
 
   render() {
@@ -94,15 +117,13 @@ class NewFurniture extends React.Component {
             </div>
           </div>
           {categoryProducts.length <= amountProduct ? (
-            <div className='row' key={uuidv4()}>
-              {categoryProducts
-                .slice(activePage * amountProduct, (activePage + 1) * amountProduct)
-                .map(item => (
-                  <div key={item.id} className='col-3'>
-                    <ProductBox {...item} />
-                  </div>
-                ))}
-            </div>
+            // Component
+            <ProductContainer
+              categoryProducts={categoryProducts}
+              item={1}
+              activePage={activePage}
+              amountProduct={amountProduct}
+            />
           ) : (
             <Swipeable
               onLeftAction={() => this.handlePageChange(activePage - 1)}
@@ -111,22 +132,13 @@ class NewFurniture extends React.Component {
             >
               {this.iterationFunction(categoryProducts, amountProduct).map(item => {
                 return (
-                  <div className='row' key={uuidv4()}>
-                    {categoryProducts
-                      .slice(
-                        activePage === 0
-                          ? activePage + item.id * amountProduct
-                          : activePage * item.id * amountProduct,
-                        activePage === 0
-                          ? (activePage + item.id + 1) * amountProduct
-                          : (activePage * item.id + 1) * amountProduct
-                      )
-                      .map(item => (
-                        <div key={uuidv4()} className='col-3'>
-                          <ProductBox {...item} />
-                        </div>
-                      ))}
-                  </div>
+                  <ProductContainer
+                    key={uuidv4()}
+                    categoryProducts={categoryProducts}
+                    item={item}
+                    activePage={activePage}
+                    amountProduct={amountProduct}
+                  />
                 );
               })}
             </Swipeable>
