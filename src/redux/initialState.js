@@ -7,6 +7,15 @@ const initialState = {
     { id: 'table', name: 'Table' },
     { id: 'dining', name: 'Dining' },
   ],
+  navbar: [
+    { id: 'nav-link-1', linkTo: '/', linkName: 'Home' },
+    { id: 'nav-link-2', linkTo: '/shop/furniture', linkName: 'Furniture' },
+    { id: 'nav-link-3', linkTo: '/shop/chair', linkName: 'Chair' },
+    { id: 'nav-link-4', linkTo: '/shop/table', linkName: 'Table' },
+    { id: 'nav-link-5', linkTo: '/shop/sofa', linkName: 'Sofa' },
+    { id: 'nav-link-6', linkTo: '/shop/bedroom', linkName: 'Bedroom' },
+    { id: 'nav-link-7', linkTo: '/blog', linkName: 'Blog' },
+  ],
   products: [
     {
       id: 'aenean-ru-bristique-1',
