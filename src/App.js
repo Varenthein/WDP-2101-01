@@ -32,11 +32,11 @@ class App extends Component {
   render() {
     const { user } = this.state;
     return (
-      <div className="App">
-        <div className="cookieInfo">
+      <div className='App'>
+        <div className='cookieInfo'>
           <h6>Ta strona wykorzystuje pliki cookies.</h6>
           {user && <p>{user}</p>}
-          <CloseButton />
+          <CloseButton function={() => this.handleCookie('cookies')} />
         </div>
         <Provider store={store}>
           <BrowserRouter>
