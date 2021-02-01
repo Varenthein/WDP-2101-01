@@ -159,6 +159,10 @@
         border: none;
       }
 
+      &:hover{
+        transition: 0.6s;
+      }
+
       &:hover,
       &.active {
         background-color: $menu-background-hover;
