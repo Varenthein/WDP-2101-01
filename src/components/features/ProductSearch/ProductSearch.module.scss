@@ -28,7 +28,8 @@
 
     // Animation of Hover
     &:hover {
-      background-color: $orange-main;
+      color: $white;
+      background-color: $white;
     }
 
     &::before {
@@ -39,14 +40,14 @@
       height: 0%;
       background: #363636;
       z-index: 0;
-      transition: 0.8s;
+      transition: 0.4s;
 
       bottom: 0;
-      border-radius: 70% 0% 0 0;
     }
 
     &:hover::before {
       height: 100%;
+      width: 100%;
     }
 
     .icon:first-child {
