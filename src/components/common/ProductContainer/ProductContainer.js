@@ -36,10 +36,10 @@ function ProductContainer({ categoryProducts, activePage, item, amountProduct })
 }
 
 ProductContainer.propTypes = {
-  categoryProducts: PropTypes.object,
+  categoryProducts: PropTypes.array,
   activePage: PropTypes.number,
   amountProduct: PropTypes.number,
-  item: PropTypes.number,
+  item: PropTypes.object,
 };
 
 export default ProductContainer;

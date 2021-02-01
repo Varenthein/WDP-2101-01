@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
 
 import styles from './NewFurniture.module.scss';
-import ProductBox from '../../common/ProductBox/ProductBoxContainer';
 import ProductContainer from '../../common/ProductContainer/ProductContainer';
 
 import Swipeable from '../../common/Swipeable/Swipeable';
@@ -18,6 +17,7 @@ class NewFurniture extends React.Component {
 
   handlePageChange(newPage) {
     this.setState({ activePage: newPage });
+    this.setState({ numberOfRows: [] });
   }
 
   handleCategoryChange(newCategory) {
@@ -120,7 +120,7 @@ class NewFurniture extends React.Component {
             // Component
             <ProductContainer
               categoryProducts={categoryProducts}
-              item={1}
+              item={{ id: 1 }}
               activePage={activePage}
               amountProduct={amountProduct}
             />
