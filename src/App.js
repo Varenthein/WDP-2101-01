@@ -36,7 +36,7 @@ class App extends Component {
         <div className='cookieInfo'>
           <h6>Ta strona wykorzystuje pliki cookies.</h6>
           {user && <p>{user}</p>}
-          <CloseButton function={() => this.handleCookie('cookies')} />
+          <CloseButton onClick={() => this.handleCookie()} />
         </div>
         <Provider store={store}>
           <BrowserRouter>
