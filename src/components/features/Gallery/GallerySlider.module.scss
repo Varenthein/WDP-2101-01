@@ -78,7 +78,13 @@
     img {
       width: 100%;
       height: 100%;
-      object-fit: cover;;
+      object-fit: cover;
+      background: {
+        color: $photo-background;
+        size: contain;
+        position: center;
+        repeat: no-repeat;
+      }
     }
   }
 

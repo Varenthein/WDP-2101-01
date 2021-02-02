@@ -3,24 +3,18 @@ import PropTypes from 'prop-types';
 import styles from './GallerySlider.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-  //faStar,
   faExchangeAlt,
   faShoppingBasket,
-  faChevronLeft,
-  faChevronRight,
 } from '@fortawesome/free-solid-svg-icons';
 import {
-  //farStar,
   faHeart,
   faEye,
 } from '@fortawesome/free-regular-svg-icons';
 import Button from '../../common/Button/Button';
-import StarsRating from '../../common/StarsRating/StarsRating';
 
 class GallerySlider extends React.Component {
   state = {
     activeSlidePage: 0,
-    activeCategory: 'topSeller',
   };
 
   handleCategoryChange(newCategory) {
@@ -28,11 +22,9 @@ class GallerySlider extends React.Component {
   }
 
   render() {
-    const { products, gallery } = this.props;
-    const { activeCategory, activeSlidePage } = this.state;
+    const { gallery, imageSource } = this.props;
+    const { activeCategory } = this.state;
 
-    const topSeller = products.filter(item => item.topSeller);
-   
     return (
       <div className={styles.root}>
         <h5 className={styles.title}>FURNITURE GALLERY</h5>
@@ -51,11 +43,13 @@ class GallerySlider extends React.Component {
           </ul>
         </div>
         <div className={styles.sliderImageWrapper}>
-          <img
-            src={styles.image}
-            alt='Coming soon!'
-            className={styles.sliderImage}
-          />
+          <div
+            className={styles.photo}
+            style={{
+              backgroundImage: `url("${imageSource}")`,
+            }}
+          >
+          </div>
           <div className={styles.buttonsWrapper}>
             <div className={styles.button}>
               <Button variant='gallerySlider'>
@@ -82,38 +76,6 @@ class GallerySlider extends React.Component {
               <span>Add To Cart</span>
             </div>
           </div>
-          <div className={styles.ratingCard}>
-            <div className={styles.priceCirlce}>
-              <h5>$ {topSeller.price}</h5>
-              <h6>$ {topSeller.oldPrice}</h6>
-            </div>
-            <div className={styles.content}>
-              <h5>{topSeller.name}</h5>
-              <div className={styles.stars}>
-                <StarsRating />
-              </div>
-            </div>
-          </div>
-          <div className={styles.slider}>
-            <Button variant='galleryArrow'>
-              <FontAwesomeIcon icon={faChevronLeft} />
-            </Button>
-            {/*topSeller
-              .slice(activeSlidePage * 6, (activeSlidePage + 1) * 6)
-              .map(item => (
-                <div
-                  className={
-                    item.id === topSeller[5].id ? styles.active : styles.inActive
-                  }
-                  key={item.id}
-                >
-                  <img src={item.image} alt='coming soon' />
-                </div>
-                ))e*/}
-            <Button variant='galleryArrow'>
-              <FontAwesomeIcon icon={faChevronRight} />
-            </Button>
-          </div>
         </div>
       </div>
     );
@@ -123,6 +85,7 @@ class GallerySlider extends React.Component {
 GallerySlider.propTypes = {
   gallery: PropTypes.array,
   products: PropTypes.array,
+  imageSource: PropTypes.string,
 };
 
 export default GallerySlider;
