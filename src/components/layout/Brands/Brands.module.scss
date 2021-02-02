@@ -42,9 +42,11 @@
         border-color: $grey;
         margin: 0 15px;
         align-items: center;
+        overflow: hidden;
 
         img {
-          height: 60%;
+          max-width: 100%;
+          max-height: 100%;
           opacity: 50%;
         }
       }
