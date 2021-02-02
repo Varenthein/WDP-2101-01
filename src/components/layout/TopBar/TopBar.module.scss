@@ -1,5 +1,5 @@
-@import "../../../styles/settings.scss";
-@import "../../../styles/mixins.scss";
+@import '../../../styles/settings.scss';
+@import '../../../styles/mixins.scss';
 
 .root {
   background-color: $header-topbar-bg;
@@ -16,6 +16,8 @@
       a {
         color: $topbar-text;
         font-size: 13px;
+        display: flex;
+        align-items: center;
 
         &:hover {
           color: $topbar-text-hover;
@@ -31,12 +33,49 @@
       flex-grow: 2;
     }
 
-    & ul li {
-      margin-right: 10px;
-
+    ul li {
+      color: $white;
+      font-size: 13px;
+      background-color: $header-topbar-bg;
+      padding: 0 10px;
       .icon {
         margin-left: 5px;
       }
+    }
+
+    ul ul {
+      display: inline-block;
+      z-index: 1;
+    }
+
+    ul ul ul {
+      display: none;
+      position: absolute;
+      top: 40px;
+
+      &.currency {
+        left: 15px;
+        width: 60px;
+      }
+
+      &.language {
+        left: 75px;
+        width: 80px;
+      }
+
+      &.help {
+        left: 155px;
+        width: 60px;
+      }
+    }
+
+    ul ul:hover ul {
+      display: block;
+    }
+
+    ul ul ul li {
+      display: block;
+      line-height: 25px;
     }
   }
 
