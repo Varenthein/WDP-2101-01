@@ -11,6 +11,11 @@ import Homepage from './components/views/Homepage/Homepage';
 import ProductList from './components/views/ProductList/ProductList';
 import ProductPage from './components/views/ProductPage/ProductPage';
 
+import PaymentOptions from './components/views/Payment-Options/PaymentOptions';
+import ShippingAndDelivery from './components/views/ShippingAndDelivery/ShippingAndDelivery';
+import Returns from './components/views/Returns/Returns';
+import Shipping from './components/views/Shipping/Shipping';
+
 const App = () => (
   <Provider store={store}>
     <BrowserRouter>
@@ -19,6 +24,14 @@ const App = () => (
           <Route exact path={'/'} component={Homepage} />
           <Route exact path={'/shop/:categoryId'} component={ProductList} />
           <Route exact path={'/product/:productId'} component={ProductPage} />
+          <Route exact path={'/payment-options'} component={PaymentOptions} />
+          <Route
+            exact
+            path={'/shipping-and-delivery'}
+            component={ShippingAndDelivery}
+          />
+          <Route exact path={'/returns'} component={Returns} />
+          <Route exact path={'/shipping'} component={Shipping} />
         </Switch>
       </MainLayout>
     </BrowserRouter>
