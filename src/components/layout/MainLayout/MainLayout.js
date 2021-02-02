@@ -35,8 +35,4 @@ class MainLayout extends React.Component {
   }
 }
 
-MainLayout.propTypes = {
-  brands: PropTypes.array,
-};
-
 export default MainLayout;
