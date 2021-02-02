@@ -1,0 +1,31 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  display: flex;
+  justify-content: space-around;
+
+  .item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background-color: $counter-bg;
+
+    span {
+      color: $counter-text;
+      line-height: 1.2;
+      font-weight: bold;
+    }
+
+    .value {
+      font-size: 20px;
+    }
+
+    .unit {
+      font-size: 12px;
+    }
+  }
+}

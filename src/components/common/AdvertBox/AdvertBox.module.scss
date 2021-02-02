@@ -1,0 +1,45 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  position: relative;
+  height: 480px;
+
+  img {
+    position: center;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .text {
+    background-color: $ad-text-bg;
+    position: absolute;
+    top: 25%;
+    width: 100%;
+    padding: 2rem 1rem 4rem 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: $ad-text;
+    font-weight: 200;
+    font-size: pink;
+
+    .title {
+      font-weight: 300;
+      font-size: 3.6rem;
+    }
+  }
+
+  .button {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-color: $ad-button-text;
+    color: $ad-button;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 1.2rem 1.8rem;
+    border-radius: 4px;
+    transition: 0.2s;
+  }
+}

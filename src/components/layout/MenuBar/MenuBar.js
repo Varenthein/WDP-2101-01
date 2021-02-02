@@ -6,7 +6,7 @@ import ProductSearch from '../../features/ProductSearch/ProductSearch';
 
 import styles from './MenuBar.module.scss';
 
-const MenuBar = ({ children }) => (
+const MenuBar = ({ navbar }) => (
   <div className={styles.root}>
     <div className='container'>
       <div className='row align-items-center'>
@@ -19,27 +19,11 @@ const MenuBar = ({ children }) => (
             <span className={styles.menuIcon}></span>
           </label>
           <nav className={styles.menu}>
-            <NavLink exact to='/' activeClassName={styles.active}>
-              Home
-            </NavLink>
-            <NavLink exact to='/shop/furniture' activeClassName={styles.active}>
-              Furniture
-            </NavLink>
-            <NavLink exact to='/shop/chair' activeClassName={styles.active}>
-              Chair
-            </NavLink>
-            <NavLink exact to='/shop/table' activeClassName={styles.active}>
-              Table
-            </NavLink>
-            <NavLink exact to='/shop/sofa' activeClassName={styles.active}>
-              Sofa
-            </NavLink>
-            <NavLink exact to='/shop/bedroom' activeClassName={styles.active}>
-              Bedroom
-            </NavLink>
-            <NavLink exact to='/blog' activeClassName={styles.active}>
-              Blog
-            </NavLink>
+            {navbar.map(({ linkTo, linkName, id }) => (
+              <NavLink key={id} exact to={linkTo} activeClassName={styles.active}>
+                {linkName}
+              </NavLink>
+            ))}
           </nav>
         </div>
       </div>
@@ -49,6 +33,11 @@ const MenuBar = ({ children }) => (
 
 MenuBar.propTypes = {
   children: PropTypes.node,
+  navbar: PropTypes.array,
+};
+
+MenuBar.defaultProps = {
+  navbar: [],
 };
 
 export default MenuBar;
