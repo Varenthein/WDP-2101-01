@@ -1,10 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
-
 import styles from './NewFurniture.module.scss';
 import ProductContainer from '../../common/ProductContainer/ProductContainer';
-
 import Swipeable from '../../common/Swipeable/Swipeable';
 
 class NewFurniture extends React.Component {
