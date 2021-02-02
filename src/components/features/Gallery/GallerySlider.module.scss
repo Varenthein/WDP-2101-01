@@ -8,7 +8,8 @@
     margin-bottom: 30px;
     letter-spacing: 1.5px;
     padding-bottom: 10px;
-    border-bottom: 2px solid $gallery-circle;
+    border-bottom: 3px solid $gallery-circle;
+    position: relative;
 
     &::before {
       content: "";
@@ -16,7 +17,7 @@
       bottom: -2px;
       left: 0;
       width: 35px;
-      border-bottom: 2px solid $gallery-orange;
+      border-bottom: 3px solid $gallery-orange;
     }
   }
   .menu {
@@ -79,12 +80,6 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      background: {
-        color: $photo-background;
-        size: contain;
-        position: center;
-        repeat: no-repeat;
-      }
     }
   }
 
