@@ -31,6 +31,7 @@ const initialState = {
         'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=2250&q=80',
       isFavorite: false,
       isExchange: false,
+      hotDeal: true,
     },
     {
       id: 'aenean-ru-bristique-2',
@@ -45,6 +46,7 @@ const initialState = {
         'https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2250&q=80',
       isFavorite: true,
       isExchange: false,
+      hotDeal: true,
     },
     {
       id: 'aenean-ru-bristique-3',
@@ -58,6 +60,7 @@ const initialState = {
         'https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=933&q=80',
       isFavorite: true,
       isExchange: true,
+      hotDeal: true,
     },
     {
       id: 'aenean-ru-bristique-4',
@@ -73,6 +76,7 @@ const initialState = {
         'https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1301&q=80',
       isFavorite: false,
       isExchange: true,
+      hotDeal: false,
     },
     {
       id: 'aenean-ru-bristique-5',
@@ -86,6 +90,7 @@ const initialState = {
       isExchange: false,
       imageSource:
         'https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=2250&q=80',
+      hotDeal: false,
     },
     {
       id: 'aenean-ru-bristique-6',
@@ -99,6 +104,7 @@ const initialState = {
       isExchange: false,
       imageSource:
         'https://images.unsplash.com/photo-1538688525198-9b88f6f53126?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2167&q=80',
+      hotDeal: false,
     },
     {
       id: 'aenean-ru-bristique-7',
@@ -112,6 +118,7 @@ const initialState = {
       isExchange: false,
       imageSource:
         'https://images.unsplash.com/photo-1554295405-abb8fd54f153?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=881&q=80',
+      hotDeal: false,
     },
     {
       id: 'aenean-ru-bristique-8',
@@ -126,6 +133,7 @@ const initialState = {
       isExchange: false,
       imageSource:
         'https://images.unsplash.com/photo-1519947486511-46149fa0a254?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=934&q=80',
+      hotDeal: false,
     },
     {
       id: 'aenean-ru-bristique-9',
@@ -139,6 +147,7 @@ const initialState = {
       isExchange: false,
       imageSource:
         'https://images.unsplash.com/photo-1487015307662-6ce6210680f1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=932&q=80',
+      hotDeal: false,
     },
     {
       id: 'aenean-ru-bristique-10',
@@ -153,6 +162,7 @@ const initialState = {
       isExchange: false,
       imageSource:
         'https://images.unsplash.com/photo-1549488344-cbb6c34cf08b?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=934&q=80',
+      hotDeal: false,
     },
     {
       id: 'aenean-ru-bristique-11',
@@ -167,6 +177,7 @@ const initialState = {
       isExchange: false,
       imageSource:
         'https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=2250&q=80',
+      hotDeal: false,
     },
     {
       id: 'aenean-ru-bristique-12',
@@ -180,6 +191,7 @@ const initialState = {
       isExchange: false,
       imageSource:
         'https://images.unsplash.com/photo-1551516594-56cb78394645?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2216&q=80',
+      hotDeal: false,
     },
     {
       id: 'aenean-ru-bristique-13',
@@ -194,6 +206,7 @@ const initialState = {
       isExchange: false,
       imageSource:
         'https://images.unsplash.com/photo-1532588213355-52317771cce6?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=2167&q=80',
+      hotDeal: false,
     },
     {
       id: 'aenean-ru-bristique-14',
@@ -207,6 +220,7 @@ const initialState = {
       isExchange: false,
       imageSource:
         'https://images.unsplash.com/photo-1517705008128-361805f42e86?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=2179&q=80',
+      hotDeal: false,
     },
     {
       id: 'aenean-ru-bristique-15',
@@ -220,6 +234,7 @@ const initialState = {
       isExchange: false,
       imageSource:
         'https://images.unsplash.com/photo-1551298370-9d3d53740c72?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80',
+      hotDeal: false,
     },
     {
       id: 'aenean-ru-bristique-16',
@@ -234,6 +249,7 @@ const initialState = {
       isExchange: false,
       imageSource:
         'https://images.unsplash.com/photo-1506898667547-42e22a46e125?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1250&q=80',
+      hotDeal: false,
     },
     {
       id: 'aenean-ru-bristique-17',
@@ -247,6 +263,7 @@ const initialState = {
       isExchange: false,
       imageSource:
         'https://images.unsplash.com/photo-1503602642458-232111445657?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=934&q=80',
+      hotDeal: false,
     },
     {
       id: 'aenean-ru-bristique-18',
@@ -261,6 +278,7 @@ const initialState = {
       isExchange: false,
       imageSource:
         'https://images.unsplash.com/photo-1544030288-e6e6108867f6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80',
+      hotDeal: false,
     },
     {
       id: 'aenean-ru-bristique-19',
@@ -274,6 +292,7 @@ const initialState = {
       isExchange: false,
       imageSource:
         'https://images.unsplash.com/photo-1544457070-4cd773b4d71e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1686&q=80',
+      hotDeal: false,
     },
     {
       id: 'aenean-ru-bristique-20',
@@ -287,6 +306,7 @@ const initialState = {
       isExchange: false,
       imageSource:
         'https://images.unsplash.com/photo-1592078615290-033ee584e267?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1300&q=80',
+      hotDeal: false,
     },
     {
       id: 'aenean-ru-bristique-21',
@@ -300,6 +320,7 @@ const initialState = {
       isExchange: false,
       imageSource:
         'https://images.unsplash.com/photo-1461418749540-8c49a1d7369e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1258&q=80',
+      hotDeal: false,
     },
     {
       id: 'aenean-ru-bristique-22',
@@ -313,6 +334,7 @@ const initialState = {
       isExchange: false,
       imageSource:
         'https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2251&q=80',
+      hotDeal: false,
     },
     {
       id: 'aenean-ru-bristique-23',
@@ -327,6 +349,7 @@ const initialState = {
       isExchange: false,
       imageSource:
         'https://images.unsplash.com/photo-1551216223-37c8d1dbec5c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80',
+      hotDeal: false,
     },
     {
       id: 'aenean-ru-bristique-24',
@@ -340,6 +363,7 @@ const initialState = {
       isExchange: false,
       imageSource:
         'https://images.unsplash.com/photo-1499933374294-4584851497cc?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1275&q=80',
+      hotDeal: false,
     },
   ],
   cart: {
@@ -452,6 +476,29 @@ const initialState = {
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae cumque harum soluta voluptate.',
       author: 'Mitis Novel',
       aboutAuthor: 'Our Client',
+    },
+  ],
+  ads: [
+    {
+      id: '1',
+      imageSource:
+        'https://cdn.pixabay.com/photo/2014/09/15/21/46/couch-447484_960_720.jpg',
+      title: 'INDOOR FURNITURE1',
+      description: 'SAVE UP TO 50% OF ALL FURNITURE',
+    },
+    {
+      id: '2',
+      imageSource:
+        'https://cdn.pixabay.com/photo/2016/11/19/15/50/chair-1840011_960_720.jpg',
+      title: 'INDOOR FURNITURE2',
+      description: 'BEST FURNITURE ON MARKET',
+    },
+    {
+      id: '3',
+      imageSource:
+        'https://cdn.pixabay.com/photo/2018/01/20/09/42/sofa-3094153_960_720.jpg',
+      title: 'INDOOR FURNITURE3',
+      description: 'SAVE UP TO 50% OF ALL FURNITURE',
     },
   ],
 };
