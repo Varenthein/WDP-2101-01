@@ -32,7 +32,7 @@ class GallerySlider extends React.Component {
     const { activeCategory, activeSlidePage } = this.state;
 
     const topSeller = products.filter(item => item.topSeller);
-
+   
     return (
       <div className={styles.root}>
         <h5 className={styles.title}>FURNITURE GALLERY</h5>
@@ -98,7 +98,7 @@ class GallerySlider extends React.Component {
             <Button variant='galleryArrow'>
               <FontAwesomeIcon icon={faChevronLeft} />
             </Button>
-            {topSeller
+            {/*topSeller
               .slice(activeSlidePage * 6, (activeSlidePage + 1) * 6)
               .map(item => (
                 <div
@@ -109,7 +109,7 @@ class GallerySlider extends React.Component {
                 >
                   <img src={item.image} alt='coming soon' />
                 </div>
-              ))}
+                ))e*/}
             <Button variant='galleryArrow'>
               <FontAwesomeIcon icon={faChevronRight} />
             </Button>
