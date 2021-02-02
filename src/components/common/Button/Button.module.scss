@@ -60,3 +60,24 @@
     transition: $transition-time linear;
   }
 }
+
+.closeButton {
+  display: block;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 22px;
+    height: 22px;
+    border-radius: 11px;
+    line-height: 22px;
+    font-size: 12px;
+    color: $cookies-background-color;
+    text-align: center;
+    text-decoration: none;
+    background-color: $cookies-btn;
+    box-shadow: 0px 1px 2px $cookies-box-shadow;
+    
+    &:hover {
+      background-color: $cookies-box-shadow;
+  }
+}

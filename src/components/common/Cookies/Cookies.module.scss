@@ -1,0 +1,20 @@
+.cookieInfo  {
+    margin: 0px;
+    padding: 0px;
+    position: fixed;
+    font-size: 12px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    background-color: $cookies-background-color;
+    box-shadow: 0px -1px 3px $cookies-box-shadow;
+    z-index: 1000;
+
+    .h6 {
+        font-size: 16px;
+        font-weight: bold;
+        color: $cookies-font-color;
+        text-shadow: 0px 1px 1px $cookies-box-shadow;
+        margin-bottom: 7px;
+    }
+}
