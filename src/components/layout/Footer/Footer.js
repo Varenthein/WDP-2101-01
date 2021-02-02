@@ -154,11 +154,6 @@ const Footer = ({ children }) => (
               </li>
               <li>
                 <a href='#'>
-                  <FontAwesomeIcon icon={faGooglePlusG}>Google Plus</FontAwesomeIcon>
-                </a>
-              </li>
-              <li>
-                <a href='#'>
                   <FontAwesomeIcon icon={faLinkedinIn}>LinkedIn</FontAwesomeIcon>
                 </a>
               </li>
