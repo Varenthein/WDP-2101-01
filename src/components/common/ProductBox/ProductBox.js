@@ -13,6 +13,7 @@ const ProductBox = ({
   price,
   promo,
   stars,
+  addToCompare,
   userRating,
   imageSource,
   oldPrice,
@@ -53,6 +54,8 @@ const ProductBox = ({
           <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
         </Button>
         <Button
+          href='javascript:void(0)'
+          onClick={addToCompare}
           variant='outline'
           className={isExchange === true ? styles.exchange : 'nonclass'}
         >
@@ -80,6 +83,8 @@ ProductBox.propTypes = {
   stars: PropTypes.number,
   userRating: PropTypes.number,
   imageSource: PropTypes.string,
+  addToCompare: PropTypes.func,
+  compare: PropTypes.array,
   isExchange: PropTypes.bool,
   isFavorite: PropTypes.bool,
   toggleFavorite: PropTypes.func,

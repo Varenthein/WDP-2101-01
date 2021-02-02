@@ -1,11 +1,10 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
-
 import styles from './Homepage.module.scss';
 
 import FeatureBoxes from '../../features/FeatureBoxes/FeatureBoxes';
 import HotDeals from '../../features/HotDeals/HotDealsContainer';
 import NewFurniture from '../../features/NewFurniture/NewFurnitureContainer';
+import StickyBar from '../../features/StickyBar/StickyBarContainer';
 import Promotions from './../../features/Promotions/PromotionsContainer';
 import Feedback from '../../features/Feedback/FeedbackContainer';
 
@@ -15,10 +14,9 @@ const Homepage = () => (
     <FeatureBoxes />
     <Promotions />
     <NewFurniture />
+    <StickyBar />
     <Feedback />
   </div>
 );
-
-// Homepage.propTypes = {};
 
 export default Homepage;
