@@ -22,7 +22,7 @@ class GallerySlider extends React.Component {
   }
 
   render() {
-    const { gallery, imageSource } = this.props;
+    const { gallery } = this.props;
     const { activeCategory } = this.state;
 
     return (
@@ -43,13 +43,7 @@ class GallerySlider extends React.Component {
           </ul>
         </div>
         <div className={styles.sliderImageWrapper}>
-          <div
-            className={styles.photo}
-            style={{
-              backgroundImage: `url("${imageSource}")`,
-            }}
-          >
-          </div>
+          <img className={styles.image} src='/images/couch.jpg' alt='Couch' />
           <div className={styles.buttonsWrapper}>
             <div className={styles.button}>
               <Button variant='gallerySlider'>
@@ -84,8 +78,6 @@ class GallerySlider extends React.Component {
 
 GallerySlider.propTypes = {
   gallery: PropTypes.array,
-  products: PropTypes.array,
-  imageSource: PropTypes.string,
 };
 
 export default GallerySlider;

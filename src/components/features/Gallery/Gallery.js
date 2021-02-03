@@ -1,27 +1,21 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { Col } from 'react-flexbox-grid';
+//import PropTypes from 'prop-types';
+//import { Col } from 'react-flexbox-grid';
 import styles from './Gallery.module.scss';
 import GallerySlider from './GallerySliderContainer';
 import Button from '../../common/Button/Button';
 
-const Gallery = ({ products, imageSource }) => {
-
+const Gallery = () => {
   return (
     <div className={styles.root}>
       <div className='container'>
         <div className='row'>
-          <Col xs={12} lg={6}>
+          <div className='col-lg-6 col-md-6 col-sm-12'>
             <GallerySlider />
-          </Col>
-          <Col xs={12} lg={6}>
+          </div>
+          <div className='col-lg-6 col-md-6 col-sm-12'>
             <div className={styles.imageWrapper}>
-              <div
-                className={styles.photo}
-                style={{
-                  backgroundImage: `url("${imageSource}")`,
-                }}>
-              </div>
+              <img className={styles.image} src='/images/sofa.jpg' alt='Sofa'/>
               <div className={styles.content}>
                 <div>
                   <h6>from </h6>
@@ -33,17 +27,14 @@ const Gallery = ({ products, imageSource }) => {
                 </Button>
               </div>
             </div>
-          </Col>
+          </div>
         </div>
       </div>
     </div>
   );
 };
 
-Gallery.propTypes = {
-  products: PropTypes.array,
-  saleOff: PropTypes.object,
-  imageSource: PropTypes.string,
-};
+//Gallery.propTypes = {
+//};
 
 export default Gallery;
