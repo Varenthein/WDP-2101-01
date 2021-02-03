@@ -79,16 +79,16 @@ const Footer = ({ children }) => (
               <h6>Orders</h6>
               <ul>
                 <li>
-                  <a href='#'>Payment options</a>
+                  <a href='/payment-options'>Payment options</a>
                 </li>
                 <li>
-                  <a href='#'>Shipping and delivery</a>
+                  <a href='/shipping-and-delivery'>Shipping and delivery</a>
                 </li>
                 <li>
-                  <a href='#'>Returns</a>
+                  <a href='/returns'>Returns</a>
                 </li>
                 <li>
-                  <a href='#'>Shipping</a>
+                  <a href='/shipping'>Shipping</a>
                 </li>
               </ul>
             </div>
