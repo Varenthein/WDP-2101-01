@@ -17,6 +17,7 @@
   margin: 15px 0;
   color: $promiotions-color-light;
   padding: 30px;
+  animation: PromotionLarge 500ms;
 
   .promoLargeContent {
     width: 100%;
@@ -61,6 +62,8 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  animation: promotionSmallTop 500ms;
+
   .promoSmallContent {
     & > * {
       margin-bottom: 0;
@@ -92,6 +95,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
+  animation: promotionSmallBottom 500ms;
+
   & > * {
     margin-bottom: 0;
   }
@@ -108,4 +113,40 @@
 
 .strong {
   font-weight: 700;
+}
+
+@keyframes PromotionLarge {
+  0% {
+    transform: translateX(-500%);
+  }
+  90% {
+    transform: translateX(50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes promotionSmallTop {
+  0% {
+    transform: translateY(-500%);
+  }
+  90% {
+    transform: translateY(50%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes promotionSmallBottom {
+  0% {
+    transform: translateY(500%);
+  }
+  90% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
