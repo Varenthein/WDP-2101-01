@@ -4,34 +4,49 @@
   background-color: $productBox-background;
   border: 1px solid $productBox-border;
   margin-bottom: 2rem;
+  height: 100%;
 
-  .photo {
-    position: relative;
-    padding: 80% 10px 0 10px;
-    background: {
-      color: $photo-background;
-      size: contain;
-      position: center;
-      repeat: no-repeat;
-    }
-    overflow: hidden;
-    align-items: flex-end;
-
-    .sale {
+  .photoWrapper{
+    height: 282px;
+    .counter {
       position: absolute;
-      top: -30px;
+      display: none;
+      top: 38%;
       left: 50%;
-      transform: translateX(-50%);
-      background-color: $sale-background;
-      border-radius: 50%;
-      color: $sale-text;
-      padding: 30px 15px 5px 15px;
+      transform: translate(-50%,0);
+      width: 80%;
+    }
+    .addToCart{
+      position: absolute;
+      display: none;
+      top: 35%;
+      left: 30%;
+      transform: translate(0,-46%);
+      opacity: 0.8;
+    }
+    .photo {
+      position: relative;
+      padding-top: 80%;
+      background: {
+        color: $photo-background;
+        size: contain;
+        position: center;
+        repeat: no-repeat;
+      }
+      overflow: hidden;
+      align-items: flex-end;
+
+
+      .buttons {
+        display: flex;
+        opacity: 0;
+      }
     }
 
-    .buttons {
-      display: flex;
-      justify-content: space-between;
-      opacity: 0;
+    &:hover{
+      .addToCart, .counter{
+        display: block;
+      }
     }
   }
 
@@ -44,6 +59,13 @@
       font-size: 16px;
       line-height: 24px;
       letter-spacing: 1px;
+    }
+
+    .stars {
+      a {
+        text-decoration: none;
+        color: $star-color;
+      }
     }
   }
 
@@ -86,7 +108,7 @@
   }
 
   .favorite{
-        background-color: $btn-dark-background;
+        background-color: $orange-main;
         color: $select-hearth;
     }
 
@@ -98,16 +120,13 @@
   &:hover {
     .buttons {
       opacity: 1;
+      display: flex;
+      justify-content: center;
+      z-index: 1;
     }
 
     .Button {
       background-color: $btn-price-hover;
-    }
-  }
-
-  &:active {
-    .Button {
-      background-color: $orange-main;
     }
   }
 }

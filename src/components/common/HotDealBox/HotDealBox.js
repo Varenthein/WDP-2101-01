@@ -1,19 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import styles from './ProductBox.module.scss';
+import styles from './HotDealBox.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faExchangeAlt, faShoppingBasket } from '@fortawesome/free-solid-svg-icons';
-import { faStar as faHeart } from '@fortawesome/free-regular-svg-icons';
+import {
+  faEye,
+  faStar,
+  faExchangeAlt,
+  faShoppingBasket,
+} from '@fortawesome/free-solid-svg-icons';
+import { faStar as farStar, faHeart } from '@fortawesome/free-regular-svg-icons';
 import Button from '../Button/Button';
-import StarsRating from './../StarsRating/StarsRating';
+import Counter from '../../common/Counter/Counter';
 
-const ProductBox = ({
+const HotDealBox = ({
   name,
   price,
   promo,
   stars,
-  addToCompare,
   userRating,
   imageSource,
   oldPrice,
@@ -23,29 +27,43 @@ const ProductBox = ({
   id,
 }) => (
   <div className={styles.root}>
-    <div
-      className={styles.photo}
-      style={{
-        backgroundImage: `url("${imageSource}")`,
-      }}
-    >
-      {promo && <div className={styles.sale}>{promo}</div>}
-      <div className={styles.buttons}>
-        <Button variant='small'>Quick View</Button>
-        <Button variant='small'>
-          <FontAwesomeIcon icon={faShoppingBasket} /> ADD TO CART
-        </Button>
+    <div className={styles.photoWrapper}>
+      <div
+        className={styles.photo}
+        style={{
+          backgroundImage: `url("${imageSource}")`,
+        }}
+      >
+        <div className={styles.addToCart}>
+          <Button variant='small'>
+            <FontAwesomeIcon icon={faShoppingBasket} /> ADD TO CART
+          </Button>
+        </div>
+      </div>
+      <div className={styles.counter}>
+        <Counter />
       </div>
     </div>
     <div className={styles.content}>
       <h5>{name}</h5>
       <div className={styles.stars}>
-        <StarsRating rating={stars} userRating={userRating} />
+        {[1, 2, 3, 4, 5].map(i => (
+          <a key={i} href='#'>
+            {i <= stars ? (
+              <FontAwesomeIcon icon={faStar}>{i} stars</FontAwesomeIcon>
+            ) : (
+              <FontAwesomeIcon icon={farStar}>{i} stars</FontAwesomeIcon>
+            )}
+          </a>
+        ))}
       </div>
     </div>
     <div className={styles.line} />
     <div className={styles.actions}>
       <div className={styles.outlines}>
+        <Button variant='outline'>
+          <FontAwesomeIcon icon={faEye}>Observe</FontAwesomeIcon>
+        </Button>
         <Button
           variant='outline'
           className={isFavorite === true ? styles.favorite : 'nonclass'}
@@ -54,8 +72,6 @@ const ProductBox = ({
           <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
         </Button>
         <Button
-          href='javascript:void(0)'
-          onClick={addToCompare}
           variant='outline'
           className={isExchange === true ? styles.exchange : 'nonclass'}
         >
@@ -74,7 +90,7 @@ const ProductBox = ({
   </div>
 );
 
-ProductBox.propTypes = {
+HotDealBox.propTypes = {
   children: PropTypes.node,
   name: PropTypes.string,
   price: PropTypes.number,
@@ -83,12 +99,9 @@ ProductBox.propTypes = {
   stars: PropTypes.number,
   userRating: PropTypes.number,
   imageSource: PropTypes.string,
-  addToCompare: PropTypes.func,
-  compare: PropTypes.array,
   isExchange: PropTypes.bool,
   isFavorite: PropTypes.bool,
   toggleFavorite: PropTypes.func,
   id: PropTypes.string,
 };
-
-export default ProductBox;
+export default HotDealBox;
