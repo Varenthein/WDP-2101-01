@@ -1,0 +1,2 @@
+[0202/160221.736:ERROR:directory_reader_win.cc(43)] FindFirstFile: Das System kann den angegebenen Pfad nicht finden. (0x3)
+[0202/160221.760:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\Komputer 1\AppData\Local\AVAST Software\Browser\User Data\Crashpad\attachments\2cbef922-dc4e-4694-9aae-c7a456948c30: Das System kann den angegebenen Pfad nicht finden. (0x3)

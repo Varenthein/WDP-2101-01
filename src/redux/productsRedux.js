@@ -27,6 +27,8 @@ export const sortDescByParam = ({ products }, param) =>
 
 const createActionName = name => `app/products/${name}`;
 
+export const getGallery = ({ gallery }) => gallery;
+
 /* action types */
 const TOGGLE_FAVORITE = createActionName('TOGGLE_FAVORITE');
 

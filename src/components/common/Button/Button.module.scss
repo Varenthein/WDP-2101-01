@@ -22,6 +22,7 @@
     background-color: $orange-main;
     color: $white;
     transition: $transition-time linear;
+    cursor: pointer;
   }
 }
 
@@ -37,6 +38,7 @@
     background-color: $dark-value-3;
     color: $white;
     transition: $transition-time ease-in-out;
+    cursor: pointer;
   }
 }
 
@@ -58,5 +60,48 @@
     background-color: $dark-value-3;
     color: $white;
     transition: $transition-time linear;
+    cursor: pointer;
   }
+}
+
+.gallerySlider{
+  display: inline-block;
+  width: 38px;
+  padding: 5px 10px;
+  line-height: 22px;
+  border: $gallery-text-color 1px solid ;
+  color: $gallery-text-color;
+  font-size: 12px;
+
+  &:hover {
+    border-color: $gallery-orange;
+    color: $gallery-orange;
+    transition:all $transition-time ease;
+    cursor: pointer;
+  }
+}
+
+.gallery {
+  display: inline-block;
+  padding: 10px 30px;
+  color: $gallery-text-color-light;
+  border: 1px solid $gallery-green;
+  border-radius: 5px;
+  background-color: $gallery-green;
+  font-size: 12px;
+  line-height: 22px;
+
+  &:hover{
+    text-decoration: none;
+    border-color: $gallery-orange;
+    color: $gallery-text-color;
+    cursor: pointer;
+  }
+}
+
+.galleryArrow {
+  @extend .main;
+  padding: 20px 7px;
+  height: 60px;
+  width: 25px;
 }

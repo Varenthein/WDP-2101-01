@@ -23,7 +23,7 @@ const initialState = {
       category: 'sofa',
       price: 30,
       oldPrice: 140,
-      stars: 3,
+      stars: 5,
       userRating: 4,
       promo: 'sale',
       newFurniture: true,
@@ -38,7 +38,7 @@ const initialState = {
       name: 'Aenean Ru Bristique 2',
       category: 'dining',
       price: 30,
-      stars: 4,
+      stars: 5,
       userRating: 3,
       promo: 'sale',
       newFurniture: true,
@@ -68,7 +68,7 @@ const initialState = {
       category: 'chair',
       price: 30,
       oldPrice: 40,
-      stars: 2,
+      stars: 5,
       userRating: 2,
       promo: 'sale',
       newFurniture: true,
@@ -83,7 +83,7 @@ const initialState = {
       name: 'Aenean Ru Bristique 5',
       category: 'sofa',
       price: 30,
-      stars: 1,
+      stars: 5,
       promo: 'sale',
       newFurniture: true,
       isFavorite: false,
@@ -366,9 +366,28 @@ const initialState = {
       hotDeal: false,
     },
   ],
+
   cart: {
     products: [],
   },
+  gallery: [
+    {
+      id: 'featured',
+      name: 'FEATURED',
+    },
+    {
+      id: 'topSeller',
+      name: 'TOP SELLER',
+    },
+    {
+      id: 'saleOff',
+      name: 'SALE OFF',
+    },
+    {
+      id: 'topRated',
+      name: 'TOP RATED',
+    },
+  ],
   compare: [],
   brands: [
     {
@@ -450,6 +469,7 @@ const initialState = {
       priceoff: 'save up 45% of furniture',
     },
   ],
+
   feedback: [
     {
       id: 1,
