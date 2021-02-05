@@ -18,10 +18,10 @@ const ProductList = ({ match }) => (
         </div>
       </div>
       <div className='row m-0'>
-        <div className={styles.breadcumbBar}>
-          <span className={styles.breadcumb}>Home</span>
-          <span className={styles.breadcumb}>&gt;</span>
-          <span className={styles.breadcumb}>
+        <div className={styles.breadcrumbBar}>
+          <span className={styles.breadcrumb}>Home</span>
+          <span className={styles.breadcrumb}>&gt;</span>
+          <span className={styles.breadcrumb}>
             <span>{match.params.categoryId}</span>
           </span>
         </div>
