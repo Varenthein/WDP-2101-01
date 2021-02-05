@@ -1,5 +1,54 @@
-@import "../../../styles/settings.scss";
+@import '../../../styles/settings.scss';
+@import '../../../styles/mixins.scss';
 
 .root {
-  padding: $base-padding 0;
+  padding: 0;
+
+  :global(.row) {
+    width: 100%;
+  }
+
+  .ad {
+    height: 197px;
+    width: 100%;
+    color: #ffffff;
+    background-color: $dark-value-3;
+
+    h1 {
+      font-size: 54px;
+      font-weight: 300;
+      span {
+        font-weight: 600;
+      }
+    }
+
+    h2 {
+      font-size: 24px;
+      font-weight: 300;
+      letter-spacing: 12px;
+      span {
+        color: $orange-main;
+      }
+    }
+  }
+
+  .breadcrumbBar {
+    height: 47px;
+    width: 100%;
+    padding: 10px;
+    background-color: #e2e2e2;
+
+    .breadcrumb {
+      padding: 0 5px;
+      color: $dark-value-3;
+      text-transform: capitalize;
+      font-size: 13px;
+      font-weight: 400;
+
+      span {
+        font-weight: 600;
+        color: $orange-main;
+      }
+    }
+  }
 }
