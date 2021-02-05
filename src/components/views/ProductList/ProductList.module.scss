@@ -4,13 +4,8 @@
 .root {
   padding: 0;
 
-  :global(.container) {
-    width: 1140px;
-  }
-
   :global(.row) {
     width: 100%;
-    display: flex;
   }
 
   .ad {
@@ -37,13 +32,13 @@
     }
   }
 
-  .breadcumbBar {
+  .breadcrumbBar {
     height: 47px;
     width: 100%;
     padding: 10px;
     background-color: #e2e2e2;
 
-    .breadcumb {
+    .breadcrumb {
       padding: 0 5px;
       color: $dark-value-3;
       text-transform: capitalize;
