@@ -4,13 +4,8 @@
 .root {
   padding: 0;
 
-  :global(.container) {
-    width: 1140px;
-  }
-
   :global(.row) {
     width: 100%;
-    display: flex;
   }
 
   .ad {
@@ -37,13 +32,13 @@
     }
   }
 
-  .breadcumbBar {
+  .breadcrumbBar {
     height: 47px;
     width: 100%;
     padding: 10px;
     background-color: #e2e2e2;
 
-    .breadcumb {
+    .breadcrumb {
       padding: 0 5px;
       color: $dark-value-3;
       text-transform: capitalize;
@@ -52,6 +47,60 @@
 
       span {
         font-weight: 600;
+        color: $orange-main;
+      }
+    }
+  }
+
+  .productList {
+    .categoryName {
+      font-size: 22px;
+      font-weight: 600;
+    }
+
+    .dropdownInput {
+      label {
+        font-size: 14px;
+        padding-right: 10px;
+      }
+
+      select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        height: 34px;
+        font-size: 14px;
+        color: #939393;
+        border: 1px solid #b7b7b7;
+        padding: 5px 10px;
+        background-image: linear-gradient(45deg, transparent 50%, #939393 50%),
+          linear-gradient(135deg, #939393 50%, transparent 50%);
+        background-position: calc(100% - 15px) calc(100% - 14px), calc(100% - 10px) calc(100% - 14px);
+        background-size: 5px 5px, 5px 5px;
+        background-repeat: no-repeat;
+      }
+    }
+
+    .sortByInput {
+      select {
+        width: 194px;
+      }
+    }
+
+    .showInput {
+      select {
+        width: 68px;
+      }
+    }
+
+    .view {
+      width: 67px;
+      height: 34px;
+      border: 1px solid #b7b7b7;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+
+      .icon:hover {
         color: $orange-main;
       }
     }
