@@ -53,6 +53,11 @@
   }
 
   .productList {
+    .header {
+      border-bottom: 1px solid $dark-value-3;
+      padding-bottom: 14px;
+    }
+
     .categoryName {
       font-size: 22px;
       font-weight: 600;
@@ -102,6 +107,133 @@
 
       .icon:hover {
         color: $orange-main;
+      }
+    }
+  }
+
+  .filtres {
+    .header {
+      border-bottom: 1px solid $dark-value-3;
+      margin-bottom: 14px;
+    }
+
+    .title {
+      color: $dark-value-3;
+      font-size: 16px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .filtresList {
+      display: block;
+      margin-bottom: 14px;
+      font-size: 13px;
+
+      ul {
+        line-height: 34px;
+        padding: 0;
+
+        li {
+          display: flex;
+          justify-content: space-between;
+
+          span {
+            position: relative;
+          }
+
+          .count {
+            background-color: $black;
+            color: $white;
+            text-align: center;
+            height: 23px;
+            width: 23px;
+            line-height: 23px;
+            border-radius: 50%;
+          }
+
+          .colorFilterBox {
+            display: inline-block;
+            width: 13px;
+            height: 13px;
+            border-radius: 2px;
+            margin-right: 10px;
+
+            &.red {
+              background-color: #fa5f66;
+            }
+            &.black {
+              background-color: #454545;
+            }
+            &.yellow {
+              background-color: #e9e600;
+            }
+            &.blue {
+              background-color: #0190d3;
+            }
+            &.pink {
+              background-color: #f72fe4;
+            }
+            &.green {
+              background-color: #14d400;
+            }
+          }
+
+          input[type='checkbox'] {
+            -webkit-appearance: none;
+            height: 13px;
+            width: 13px;
+            border: 1px solid $black;
+            border-radius: 2px;
+            margin-right: 10px;
+
+            &:checked {
+              background-color: $orange-main;
+              border-color: $orange-main;
+            }
+          }
+
+          label {
+            padding-left: 10px;
+          }
+
+          .tagFilter li {
+            flex-direction: row;
+          }
+
+          .tag {
+            margin: 0 16px 12px 0;
+            padding: 0 12px;
+            border: 1px solid $light-value-4;
+            display: inline;
+
+            .span {
+              padding-left: 5px;
+            }
+          }
+
+          &:hover {
+            color: $orange-main;
+            .count {
+              background-color: $orange-main;
+            }
+            .tag {
+              border: 1px solid $orange-main;
+            }
+          }
+
+          &.active {
+            color: $orange-main;
+            .filterName {
+              left: 15px;
+            }
+            .count {
+              background-color: $orange-main;
+            }
+            .tag {
+              border: 1px solid $orange-main;
+            }
+          }
+        }
       }
     }
   }
