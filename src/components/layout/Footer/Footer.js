@@ -7,7 +7,6 @@ import {
   faTwitter,
   faFacebookF,
   faYoutube,
-  faGooglePlusG,
   faLinkedinIn,
   faPinterestP,
 } from '@fortawesome/free-brands-svg-icons';
@@ -41,7 +40,7 @@ const Footer = ({ children }) => (
               <h6>My account</h6>
               <ul>
                 <li>
-                  <a href='#'>Login</a>
+                  <a href='/login'>Login</a>
                 </li>
                 <li>
                   <a href='#'>My cart</a>

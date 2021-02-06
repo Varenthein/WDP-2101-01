@@ -105,3 +105,18 @@
   height: 60px;
   width: 25px;
 }
+
+.login {
+  background-color: $btn-dark-background;
+  color: $btn-dark-text;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  padding: 10px 30px;
+
+  &:hover {
+    background-color: $orange-main;
+    color: $white;
+    cursor: pointer;
+  }
+}
