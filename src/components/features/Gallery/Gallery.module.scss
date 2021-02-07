@@ -21,6 +21,10 @@
       display: none;
     }
 
+    @include mobile {
+      display: none;
+    }
+    
     .image {
       position: absolute;
       top: 0;
