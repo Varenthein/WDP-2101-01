@@ -32,10 +32,10 @@ function Brands({ brands }) {
               onRightAction={() => setIndex(index + 1)}
               enableMouseEvents
             >
-              {getBrandsSets(brands, brandPerSet).map(set => {
+              {getBrandsSets(brands, brandPerSet).map(sets => {
                 return (
-                  <div className={styles.brandList} key={set.id}>
-                    {set.map(brand => (
+                  <div className={styles.brandList} key={sets.id}>
+                    {sets.map(brand => (
                       <div className={styles.brands} key={brand.id} {...brand}>
                         <img src={brand.image} alt='brand-logo' />
                       </div>
