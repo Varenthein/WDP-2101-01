@@ -7,7 +7,6 @@ import {
   faTwitter,
   faFacebookF,
   faYoutube,
-  faGooglePlusG,
   faLinkedinIn,
   faPinterestP,
 } from '@fortawesome/free-brands-svg-icons';
@@ -41,7 +40,7 @@ const Footer = ({ children }) => (
               <h6>My account</h6>
               <ul>
                 <li>
-                  <a href='#'>Login</a>
+                  <a href='/login'>Login</a>
                 </li>
                 <li>
                   <a href='#'>My cart</a>
@@ -79,16 +78,16 @@ const Footer = ({ children }) => (
               <h6>Orders</h6>
               <ul>
                 <li>
-                  <a href='#'>Payment options</a>
+                  <a href='/payment-options'>Payment options</a>
                 </li>
                 <li>
-                  <a href='#'>Shipping and delivery</a>
+                  <a href='/shipping-and-delivery'>Shipping and delivery</a>
                 </li>
                 <li>
-                  <a href='#'>Returns</a>
+                  <a href='/returns'>Returns</a>
                 </li>
                 <li>
-                  <a href='#'>Shipping</a>
+                  <a href='/shipping'>Shipping</a>
                 </li>
               </ul>
             </div>
@@ -150,11 +149,6 @@ const Footer = ({ children }) => (
               <li>
                 <a href='#'>
                   <FontAwesomeIcon icon={faYoutube}>YouTube</FontAwesomeIcon>
-                </a>
-              </li>
-              <li>
-                <a href='#'>
-                  <FontAwesomeIcon icon={faGooglePlusG}>Google Plus</FontAwesomeIcon>
                 </a>
               </li>
               <li>

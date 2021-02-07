@@ -12,8 +12,8 @@ const CompanyClaim = () => (
       <div className='row align-items-center'>
         <div className={`col text-left ${styles.phoneNumber}`}>
           <p>
-            <FontAwesomeIcon className={styles.icon} icon={faMobileAlt} /> 2300 - 3560 -
-            222
+            <FontAwesomeIcon className={styles.icon} icon={faMobileAlt} /> 125 - 789 -
+            456
           </p>
         </div>
         <div className='col text-center'>
@@ -25,8 +25,8 @@ const CompanyClaim = () => (
           <a href='#' className={styles.cartBox}>
             <div className={styles.cartIcon}>
               <FontAwesomeIcon className={styles.icon} icon={faShoppingBasket} />
+              <div className={styles.cartCounter}> 0</div>
             </div>
-            <div className={styles.cartCounter}>0</div>
           </a>
         </div>
       </div>

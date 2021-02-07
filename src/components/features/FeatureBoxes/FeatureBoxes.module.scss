@@ -5,8 +5,8 @@
   padding: 5rem 0;
   width: 100%;
 
-  :global(.container) {
-    width: 100%;
+  .animationFeatureBox {
+    animation: nav-load 1000ms ease-in;
   }
 
   :global(.row) {
@@ -29,5 +29,17 @@
         margin-top: 2rem;
       }
     }
+  }
+}
+
+@keyframes nav-load {
+  0% {
+    transform: scale(0);
+  }
+  90% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
   }
 }

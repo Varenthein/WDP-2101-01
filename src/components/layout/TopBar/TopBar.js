@@ -12,33 +12,63 @@ const TopBar = () => (
       <div className='row'>
         <div className={`col text-left ${styles.topOptions}`}>
           <ul>
-            <li>
-              <a href='#'>
-                USD <FontAwesomeIcon className={styles.icon} icon={faCaretDown} />
-              </a>
-            </li>
-            <li>
-              <a href='#'>
-                English <FontAwesomeIcon className={styles.icon} icon={faCaretDown} />
-              </a>
-            </li>
-            <li>
-              <a href='#'>
-                Help <FontAwesomeIcon className={styles.icon} icon={faCaretDown} />
-              </a>
-            </li>
+            <ul>
+              <li>
+                <a href='#'>
+                  USD <FontAwesomeIcon className={styles.icon} icon={faCaretDown} />
+                </a>
+                <ul className={styles.currency}>
+                  <li>
+                    <a href='#'>USD</a>
+                  </li>
+                  <li>
+                    <a href='#'>PLN</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <a href='#'>
+                  English <FontAwesomeIcon className={styles.icon} icon={faCaretDown} />
+                </a>
+                <ul className={styles.language}>
+                  <li>
+                    <a href='#'>English</a>
+                  </li>
+                  <li>
+                    <a href='#'>Polski</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <a href='#'>
+                  Help <FontAwesomeIcon className={styles.icon} icon={faCaretDown} />
+                </a>
+                <ul className={styles.help}>
+                  <li>
+                    <a href='#'>About</a>
+                  </li>
+                  <li>
+                    <a href='#'>FAQ</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
           </ul>
         </div>
         <div className={`col text-right ${styles.topMenu}`}>
           <ul>
             <li>
-              <a href='#'>
+              <a href='/login'>
                 <FontAwesomeIcon className={styles.icon} icon={faUser} />{' '}
                 <span className={styles.text}>Login</span>
               </a>
             </li>
             <li>
-              <a href='#'>
+              <a href='/register'>
                 <FontAwesomeIcon className={styles.icon} icon={faLock} />
                 <span className={styles.text}>Register</span>
               </a>
