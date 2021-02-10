@@ -15,7 +15,7 @@ class Feedback extends Component {
 
   render() {
     const { feedback, feedbackCount } = this.props;
-    const { currentPage } = this.state;
+    const { currentP } = this.state;
 
     const dots = [];
     for (let i = 0; i < feedbackCount; i++) {
