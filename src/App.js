@@ -29,7 +29,7 @@ const App = () => (
           <Route exact path={'/shop/:categoryId'} component={ProductList} />
           <Route exact path={'/product/:productId'} component={ProductPage} />
           <Route exact path={'/payment-options'} component={PaymentOptions} />
-          <Route exact path={'/payment-options-2'} component={PaymentOptions} />
+          <Route exact path={'/payment-options-5'} component={PaymentOptions} />
           <Route
             exact
             path={'/shipping-and-delivery'}
