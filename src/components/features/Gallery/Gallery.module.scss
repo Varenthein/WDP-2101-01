@@ -1,14 +1,30 @@
 @import "../../../styles/settings.scss";
+@import "./../../../styles/mixins.scss";
+
 
 
 .root {
   background-color: $gallery-background;
 
+  .gallerySlider {
+    @include tablet {
+      display: contents;
+    }
+  }
+  
   .imageWrapper {
     position: relative;
     width: 100%;
     height: 600px;
 
+    @include tablet {
+      display: none;
+    }
+
+    @include mobile {
+      display: none;
+    }
+    
     .image {
       position: absolute;
       top: 0;

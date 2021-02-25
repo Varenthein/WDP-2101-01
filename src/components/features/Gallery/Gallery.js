@@ -10,12 +10,12 @@ const Gallery = () => {
     <div className={styles.root}>
       <div className='container'>
         <div className='row'>
-          <div className='col-lg-6 col-md-6 col-sm-12'>
+          <div className={`col-lg-6 col-md-6 col-sm-12 ${styles.gallerySlider}`}>
             <GallerySlider />
           </div>
           <div className='col-lg-6 col-md-6 col-sm-12'>
             <div className={styles.imageWrapper}>
-              <img className={styles.image} src='/images/sofa.jpg' alt='Sofa'/>
+              <img className={styles.image} src='/images/sofa.jpg' alt='Sofa' />
               <div className={styles.content}>
                 <div>
                   <h6>from </h6>
